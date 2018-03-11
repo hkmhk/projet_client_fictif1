@@ -1,0 +1,21 @@
+/* style.css */
+
+
+
+body {
+    margin: 0; /* pour éviter les marges */
+  }
+
+h1,h5 {
+
+    text-align: center;
+}
+
+.margin-up {
+    margin-top: 5vh;
+}
+
+.container {
+    margin-top: 10vh;
+}
+
