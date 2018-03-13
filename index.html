@@ -15,51 +15,173 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <header id="entete" class="row">
-            <nav class="navbar navbar-expand-lg col align-items-start">
-                <a class="navbar-brand" href="#" title="Accueil BugCookers.food">
-                    <img src="media/logoBugCookersPetit.png" width="258 " height="46 " alt="Logo BugCookers.food" />
-                </a>
-                <button class="navbar-toggler " type="button " data-toggle="collapse " data-target="#navbarText
-                        " aria-controls="navbarText " aria-expanded="false " aria-label="Toggle navigation ">
-                    <span class="navbar-toggler-icon "></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end " id="navbarText ">
-                    <ul class="navbar-nav ml-auto ">
-                        <li class="nav-item ">
-                            <a class="nav-link " href="#accueil ">ACCUEIL</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " href="#apropos ">A PROPOS</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " href="#menu ">MENU</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " href="#blog ">BLOG</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " href="#infos ">INFO PRATIQUES</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link " href="#contact ">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="row">
-                <div class="col">
+
+
+    <header id="entete" class="container-fluid">
+        <!-- BOUTON QUI S'AFFICHE SI ON EST SUR MOBILE-->
+        <nav class="navbar navbar-expand-md justify-content-between sticky-top">
+
+            <a class="navbar-brand pt-2" href="#">
+                <img src="media/logoBugCookersPetit.png" width="258px" height="46px" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--NAV QUI S'AFFICHE SI ON EST SUR DESKTOP-->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Accueil
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">A propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Infos pratiques</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="couverture d-flex flex-column justify-content-between align-items-center">
+            <div class="mb-auto mt-auto text-center">
+                <div id="grandLogo">
                     <img src="media/logoBugCookersGrand.png" alt="Bug Cookers - Insectes et Food Fusion " />
                 </div>
+                <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark" id="reserverBtn">Réserver</button>
             </div>
-        </header>
-    </div>
+        </div>
 
+    </header>
+
+    <!-- Modal -->
+    <div class="modal fade" id="reservationModale" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div id="slidesReservation" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservationModaleLabel">Réservation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="fReservation" class="">
+                        <ul class="nav nav-tabs nav-justified" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="combien-tab" data-toggle="tab" href="#combien" role="tab" aria-controls="combien" aria-selected="true"
+                                    href="#">Combien</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" id="quand-tab" data-toggle="tab" href="#quand" role="tab" aria-controls="quand" aria-selected="false"
+                                    href="#">Quand</a>
+                            </li>
+                            <li class="nav-item disabled">
+                                <a class="nav-link disabled disabled" id="qui-tab" data-toggle="tab" href="#qui" role="tab" aria-controls="qui" aria-selected="false"
+                                    href="#">Qui</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="contenuTab">
+                            <!-- TAB PANE COMBIEN ? -->
+                            <div class="tab-pane fade show active" id="combien" role="tabpanel" aria-labelledby="combien-tab">
+                                <h2 class="text-center mt-5 mb-3">Pour combien de personnes ?</h2>
+                                <ul class="nav nav-pills d-flex justify-content-center">
+                                    <li class="nav-item text-center mb-3">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">1</a>
+                                    </li>
+                                    <li class="nav-item text-center mb-3">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">2</a>
+                                    </li>
+                                    <li class="nav-item text-center mb-3">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">3</a>
+                                    </li>
+                                    <li class="nav-item text-center mb-3">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">4</a>
+                                    </li>
+                                    <li class="nav-item text-center mb-3">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">5</a>
+                                    </li>
+                                    <li class="nav-item text-center mb-3">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">6</a>
+                                    </li>
+                                    <li class="nav-item text-center mb-3">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">7</a>
+                                    </li>
+                                    <li class="nav-item text-center mb-3">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">8</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- TAB PANE QUAND ? -->
+                            <div class="tab-pane fade">
+                                <h2 class="text-center mt-5">Pour quel jour ?</h2>
+                                <div>Calendrier</div>
+                                <button>Précédent</button>
+                            </div>
+                            <!-- TAB PANE QUELLE HEURE ? -->
+                            <div class="tab-pane fade" <h2 class="text-center mt-5">Pour quelle heure ?</h2>
+                                <div>Midi</div>
+                                <ul>
+                                    <li>11h30</li>
+                                    <li>12h00</li>
+                                    <li>12h30</li>
+                                    <li>13h00</li>
+                                    <li>13h30</li>
+                                    <li>14h00</li>
+                                    <li>14h30</li>
+                                </ul>
+                                <div>Soir</div>
+                                <ul>
+                                    <li>19h30</li>
+                                    <li>20h000</li>
+                                    <li>20h30</li>
+                                    <li>21h00</li>
+                                </ul>
+                                <button>Précédent</button>
+                            </div>
+                            <!-- TAB PANE NOM ? -->
+                            <div class="form-group tab-pane fade">
+                                <h2 class="text-center mt-5">A quel nom ?</h2>
+                                <input type="text" class="form-control-lg" placeholder="Nom">
+                                <input type="text" class="form-control-lg" placeholder="Adresse email">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="checkNewsletter">
+                                    <label class="custom-control-label" for="checkNewsletter">Je m'abonne à la newsletter</label>
+                                </div>
+                                <input type="text" class="form-control-lg" placeholder="N° de téléphone">
+                                <button>Précédent</button>
+                            </div>
+                            <!-- TAB PANE RESUME ? -->
+                            <div class="tab-pane fade">
+                                <div>Réservation</div>
+                                <div>Juien Foucher. Réservation pour 4 personnes, le vendredi 16 mars à 19h30</div>
+                                <div>A très bientôt</div>
+                                <button>Terminer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <button>Continuer</button>
+            </div>
+        </div>
+
+    </div>
 
     <section id="apropos ">
 
+
         <div class="container ">
+
 
             <div class="row featurette ">
                 <div class="col-md-5 ">
@@ -116,14 +238,17 @@
 
     </section>
 
+
     <!-- ===== Section blog ===== -->
 
     <section id="blog">
+
 
         <div class="container ">
             <h5>ACTUALITÉS</h5>
             <h1>Du bruit dans la cuisine</h1>
             <div class="row justify-content-md-center margin-up ">
+
                 <div class="col-md-4 ">
                     <!-- == Cards == -->
                     <!-- card left -->
@@ -132,10 +257,12 @@
                         <div class="card-body ">
                             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                             <h5 class="card-title left">Recette aux insectes</h5>
+
                             <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
+
                 <!-- card center -->
                 <div class="col-md-4 ">
                     <div class="card cardcenter" data-toggle="modal" data-target="#exampleModal1 ">
@@ -143,10 +270,12 @@
                         <div class="card-body ">
                             <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
                             <h5 class="card-title left ">Recette aux insectes</h5>
+
                             <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
+
                 <!-- card right -->
                 <div class="col-md-4 ">
                     <div class="card cardright" data-toggle="modal" data-target="#exampleModal2">
@@ -154,11 +283,13 @@
                         <div class="card-body ">
                             <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
                             <h5 class="card-title left ">Recette aux insectes</h5>
+
                             <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- == Modals == -->
             <!-- Modal card left-->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -247,6 +378,7 @@
             <div class="text-center ">
                 <button type="button " class="btn btn-outline-secondary margin-up ">TOUTES LES ACTUALITÉS</button>
             </div>
+
         </div>
 
     </section>
