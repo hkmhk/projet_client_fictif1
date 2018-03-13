@@ -17,7 +17,6 @@ h4 {
   text-align: left;
 }
 
-<<<<<<< HEAD
 .margin-up {
   margin-top: 5vh;
 }
@@ -26,8 +25,6 @@ h4 {
   margin-top: 10vh;
 } */
 
-=======
->>>>>>> caa4d2a04138412559fe46b2f87561531d7888bb
 /*////////////////////////////////////////
 //                                      //
 //            SECTION ENTETE            //
@@ -48,8 +45,6 @@ h4 {
   background-position: center;
 }
 
-<<<<<<< HEAD
-=======
 #entete .couverture {
   min-height: 100vh;
 }
@@ -259,7 +254,6 @@ h4 {
   bottom: 2rem;
 
 
->>>>>>> caa4d2a04138412559fe46b2f87561531d7888bb
 /*////////////////////////////////////////
 //                                      //
 //            SECTION blog              //
@@ -316,9 +310,6 @@ section#blog .card-title {
     z-index: 0;
     transform: translate(-100px, 20px) rotate(8deg);
   }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> caa4d2a04138412559fe46b2f87561531d7888bb
 }
