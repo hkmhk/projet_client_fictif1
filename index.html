@@ -116,14 +116,18 @@
 
     </section>
 
+    <!-- ===== Section blog ===== -->
+
     <section id="blog">
 
         <div class="container ">
             <h5>ACTUALITÉS</h5>
             <h1>Du bruit dans la cuisine</h1>
             <div class="row justify-content-md-center margin-up ">
-                <div class="col-sm-4 ">
-                    <div class="card cardleft">
+                <div class="col-md-4 ">
+                    <!-- == Cards == -->
+                    <!-- card left -->
+                    <div class="card cardleft" data-toggle="modal" data-target="#exampleModal">
                         <img class="card-img-top " src="media/lao-cafe-56.jpg " alt="Card image cap ">
                         <div class="card-body ">
                             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -132,52 +136,116 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-sm-4 ">
-                    <div class="card cardcenter">
-                        <img class="card-img-top " src="media/insectes-comestibles.jpg" alt="Card image cap ">
+                <!-- card center -->
+                <div class="col-md-4 ">
+                    <div class="card cardcenter" data-toggle="modal" data-target="#exampleModal1 ">
+                        <img class="card-img-top " src="media/insectes-comestibles.jpg " alt="Card image cap ">
                         <div class="card-body ">
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                            <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
                             <h5 class="card-title left ">Recette aux insectes</h5>
                             <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 ">
-                    <div class="card cardright">
-                        <img class="card-img-top " src="media/cuisinierJulienBoyer.jpg" alt="Card image cap ">
+                <!-- card right -->
+                <div class="col-md-4 ">
+                    <div class="card cardright" data-toggle="modal" data-target="#exampleModal2">
+                        <img class="card-img-top " src="media/cuisinierJulienBoyer.jpg " alt="Card image cap ">
                         <div class="card-body ">
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <h5 class="card-title left">Recette aux insectes</h5>
+                            <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                            <h5 class="card-title left ">Recette aux insectes</h5>
                             <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center">
-                <button type="button" class="btn btn-outline-secondary margin-up ">TOUTES LES ACTUALITÉS</button>
+            <!-- == Modals == -->
+            <!-- Modal card left-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card" data-toggle="modal" data-target="#exampleModal">
+                                <img class="card-img-top " src="media/lao-cafe-56.jpg " alt="Card image cap ">
+                                <div class="card-body ">
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <h5 class="card-title left">Recette aux insectes</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal card center-->
+            <div class="modal fade " id="exampleModal1 " tabindex="-1 " role="dialog " aria-labelledby="exampleModalLabel1" aria-hidden="true ">
+                <div class="modal-dialog modal-dialog-centered" role="document ">
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true ">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="card" data-toggle="modal" data-target="#exampleModal1">
+                                <img class="card-img-top " src="media/insectes-comestibles.jpg " alt="Card image cap ">
+                                <div class="card-body ">
+                                    <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                                    <h5 class="card-title left ">Recette aux insectes</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button " class="btn btn-dark " data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal card right-->
+            <div class="modal fade" id="exampleModal2" tabindex="-1 " role="dialog " aria-labelledby="exampleModalLabel2" aria-hidden="true ">
+                <div class="modal-dialog modal-dialog-centered" role="document ">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel2">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true ">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="card" data-toggle="modal" data-target="#exampleModal2">
+                                <img class="card-img-top " src="media/cuisinierJulienBoyer.jpg " alt="Card image cap ">
+                                <div class="card-body ">
+                                    <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                                    <h5 class="card-title left ">Recette aux insectes</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-dark " data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center ">
+                <button type="button " class="btn btn-outline-secondary margin-up ">TOUTES LES ACTUALITÉS</button>
             </div>
         </div>
 
