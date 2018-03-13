@@ -7,21 +7,14 @@ body {
 }
 
 h1,
-h5 {
+h5,
+h4 {
   text-align: center;
   font-family: "Merriweather", serif;
 }
 
 .left {
   text-align: left;
-}
-
-.margin-up {
-  margin-top: 5vh;
-}
-
-.container {
-  margin-top: 10vh;
 }
 
 /*////////////////////////////////////////
@@ -43,6 +36,7 @@ h5 {
   min-height: 100vh;
   background-position: center;
 }
+
 #entete .couverture {
   min-height: 100vh;
 }
@@ -85,6 +79,172 @@ h5 {
   font-weight: regular;
   font-size: 2rem;
   min-width: 90px;
+
+
+/*////////////////////////////////////////
+//                                       //
+//            SECTION ABOUT              //
+//                                      //
+////////////////////////////////////////*/
+
+#apropos {
+  padding: 3rem 0;
+  background-color: rgb(245, 245, 245);
+}
+
+.apropos-container {
+  width: 70%;
+}
+
+.apropos-h2 {
+  font-size: 2rem;
+}
+
+.apropos-h4 {
+  font-size: 1rem;
+}
+
+.apropos-h5 {
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.apropos-p {
+  font-size: 1rem;
+}
+
+.img_about {
+  border-radius: 2px;
+  box-shadow: 3px 3px rgb(201, 201, 201);
+}
+
+/*////////////////////////////////////////
+//                                       //
+//            SECTION MENU              //
+//                                      //
+////////////////////////////////////////*/
+
+#menu {
+  padding: 4rem 0;
+  background-image: url(media/bckgrnd_menus.jpg);
+  background-size: cover;
+}
+
+.menu-container {
+  text-align: center;
+}
+
+.menu-h2 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  padding-bottom: 2rem;
+}
+
+.card-title {
+  padding-bottom: 1rem;
+}
+
+.menu-h4 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  font-family: "Merriweather", serif;
+}
+
+.menu-icon {
+  padding-bottom: 1rem;
+}
+
+.menu-card {
+  font-weight: 600;
+  margin: 1.5rem;
+  padding: 0 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.menu-prix {
+  margin: 0;
+  font-size: 2rem;
+  color: rgb(98, 100, 100);
+}
+
+.menu-button {
+  margin-bottom: 1.5rem;
+  transition: all 0.4s;
+}
+
+.menu-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 1px;
+}
+
+/*////////////////////////////////////////
+//                                       //
+//            SECTION FlIPPING           //
+//                                      //
+////////////////////////////////////////*/
+
+#menudsktp {
+  padding: 3rem 3rem;
+  background-image: url(media/bckgrnd_menus.jpg);
+  background-size: cover;
+}
+.menu-card-dsktp {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 30rem;
+}
+
+.card__side {
+  padding-top: 2rem;
+  height: 30rem;
+  transition: all 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.menu-card-dsktp--back {
+  position: relative;
+  transform: rotateY(180deg);
+  padding-top: 10%;
+}
+
+.menu-card-dsktp:hover .menu-card-dsktp--front {
+  transform: rotateY(-180deg);
+}
+
+.menu-card-dsktp:hover .menu-card-dsktp--back {
+  transform: rotateY(0deg);
+}
+
+.menu-card-dsktp--front {
+  padding-top: 4rem;
+}
+
+.card-body--front {
+  padding: 2rem 2rem;
+}
+
+.menu-prix-dsktp {
+  margin: 2rem 3rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.menu-button-dsktp {
+  position: absolute;
+  bottom: 2rem;
+
 
 /*////////////////////////////////////////
 //                                      //
@@ -142,5 +302,6 @@ section#blog .card-title {
     z-index: 0;
     transform: translate(-100px, 20px) rotate(8deg);
   }
+
 
 }
