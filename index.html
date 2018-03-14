@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="style_about-menus.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -206,62 +207,64 @@
 
     </section>
     <section id="menu" class="container-fluid d-xl-none d-lg-none">
-
         <div class="container menu-container">
             <h4 class="menu-h4">NOS MENUS</h4>
             <h2 class="menu-h2">Gastronomie inventive</h2>
             <div class="row justify-content-center text-center margin-up ">
-                <div class="col-8 col-sm-7 col-md-5">
-                    <div class="menu-card-dsktp">
-                        <div class="card__side menu-card-dsktp--front">
-                            <h5 class="card-title">La balade de Ferdy la fourmi</h5>
-                            <div class="card-body--front">
-                                <p class="card-text ">Tataki de fourmis rouge et confit de termites</p>
-                                <div class="menu-icon">
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                </div>
-                                <p class="card-text ">Espuma de coléoptère et brochettes de Gâte-bois</p>
-
-                                <div class="menu-icon">
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                </div>
-                                <p class="card-text ">Chamallows chocolat-cloporte, crème vanille</p>
-                                <button type="button " class="btn btn-outline-secondary">RÉSERVER</button>
-                            </div>
+                <div class="col7 col-sm-5">
+                    <div class="card">
+                        <h5 class="card-title">La balade de Ferdy la fourmi</h5>
+                        <p class="card-text ">Tataki de fourmis rouge et confit de termites</p>
+                        <div class="menu-icon">
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
                         </div>
-                        <div class="card__side menu-card-dsktp--back">
-                                <h5 class="card-title">Hommage à Jemini</h5>
-                                <div class="card-body--front">
-                                    <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
-                                    <div class="menu-icon">
-                                        <icon class="ion-android-star-outline"></icon>
-                                        <icon class="ion-android-star-outline"></icon>
-                                        <icon class="ion-android-star-outline"></icon>
-                                    </div>
-                                    <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
-    
-                                    <div class="menu-icon">
-                                        <icon class="ion-android-star-outline"></icon>
-                                        <icon class="ion-android-star-outline"></icon>
-                                        <icon class="ion-android-star-outline"></icon>
-                                    </div>
-                                    <p class="card-text ">Verrines d'hiver aux molitors </p>
-                                    <button type="button " class="btn btn-outline-secondary">RÉSERVER</button>
-                                </div>
-                            
-                            
+                        <p class="card-text ">Espuma de coléoptère et brochettes de Gâte-bois</p>
+                        <div class="menu-icon">
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
                         </div>
+                        <p class="card-text ">Chamallows chocolat-cloporte, crème vanille</p>
+                        <div class="menu-prix-dsktp">
+                            <icon class="ion-ios-more-outline"></icon> 59&euro;
+                            <icon class="ion-ios-more-outline"></icon>
+                        </div>
+                        <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="card">
+                        <h5 class="card-title">Hommage à Jemini</h5>
+                        <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
+                        <div class="menu-icon">
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                        </div>
+                        <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
+                        <div class="menu-icon">
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                        </div>
+                        <p class="card-text ">Verrines d'hiver aux molitors </p>
+                        <div class="menu-prix-dsktp">
+                            <icon class="ion-ios-more-outline"></icon> 59&euro;
+                            <icon class="ion-ios-more-outline"></icon>
+                        </div>
+                        <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
                     </div>
                 </div>
             </div>
         </div>
-        
+        </div>
+
 
     </section>
+
+    <!-- SECTION MENUS POUR DESKTOP -->
 
     <section id="menudsktp" class="container-fluid d-none d-lg-block">
 
@@ -291,8 +294,16 @@
                             </div>
                         </div>
                         <div class="card__side menu-card-dsktp--back">
-                            <div class="menu-prix-dsktp">59&euro;</div>
-                            <button type="button " class="btn btn-outline-secondary menu-button-dsktp">RÉSERVER</button>
+                            <p class="presentation_menu">Julien vous emmène dans son enfance, les courses dans les herbes hautes en culotte courte, les
+                                criquets volants de part et d'autre. Vous entendez l'été à travers ses déclarations de saveurs
+                                subtiles.
+                            </p>
+                            <p class="condition-menu">Uniquement le midi</p>
+                            <div class="menu-prix-dsktp">
+                                <icon class="ion-ios-more-outline"></icon> 59&euro;
+                                <icon class="ion-ios-more-outline"></icon>
+                            </div>
+                            <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
 
                         </div>
                     </div>
@@ -319,8 +330,15 @@
                             </div>
                         </div>
                         <div class="card__side menu-card-dsktp--back">
-                            <div class="menu-prix-dsktp">79&euro;</div>
-                            <button type="button " class="btn btn-outline-secondary menu-button-dsktp">RÉSERVER</button>
+                            <p class="presentation_menu">Rencontrer, échanger, partager. Telle est la volonté du chef qui s'inspire du vivant pour vous
+                                transmettre ses valeurs. Voici les fourmis pour vous ouvrir sur le monde.</p>
+                            <p class="condition-menu">Proposé le soir</p>
+                            <div class="menu-prix-dsktp">
+                                <icon class="ion-ios-more-outline"></icon> 89&euro;
+                                <icon class="ion-ios-more-outline"></icon>
+                            </div>
+                            <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
+
                         </div>
                     </div>
                 </div>
