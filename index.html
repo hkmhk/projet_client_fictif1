@@ -14,49 +14,51 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="media-queries.css">
     <link rel="stylesheet" href="actu.css">
+    <link rel="stylesheet" href="style_about-menus.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="header.css">
 </head>
 
-<body>
+<body data-spy="scroll">
+    <!-- BOUTON QUI S'AFFICHE SI ON EST SUR MOBILE-->
+    <nav class="navbar navbar-expand-md justify-content-between navbar-dark fixed-top">
 
+        <a class="navbar-brand pt-2" href="#">
+            <img class="img-fluid" src="media/logoBugCookersNav.png" />
+        </a>
+
+        <button class="btn navbar-toggle navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--NAV QUI S'AFFICHE SI ON EST SUR DESKTOP-->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#entete">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#apropos">A propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menudsktp">Menus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#infos">Infos pratiques</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
     <header id="entete" class="container-fluid">
-        <!-- BOUTON QUI S'AFFICHE SI ON EST SUR MOBILE-->
-        <nav class="navbar navbar-expand-md justify-content-between sticky-top">
 
-            <a class="navbar-brand pt-2" href="#">
-                <img src="media/logoBugCookersPetit.png" width="258px" height="46px" />
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!--NAV QUI S'AFFICHE SI ON EST SUR DESKTOP-->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">A propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Menus</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Infos pratiques</a>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
         <div class="couverture d-flex flex-column justify-content-between align-items-center">
             <div class="mb-auto mt-auto text-center">
                 <div id="grandLogo">
-                    <img src="media/logoBugCookersGrand.png" alt="Bug Cookers - Insectes et Food Fusion " />
+                    <img class="img-fluid" src="media/logoBugCookersGrand.png" alt="Bug Cookers - Insectes et Food Fusion " />
                 </div>
                 <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark" id="reserverBtn">Réserver</button>
             </div>
@@ -206,62 +208,64 @@
 
     </section>
     <section id="menu" class="container-fluid d-xl-none d-lg-none">
-
         <div class="container menu-container">
             <h4 class="menu-h4">NOS MENUS</h4>
             <h2 class="menu-h2">Gastronomie inventive</h2>
             <div class="row justify-content-center text-center margin-up ">
-                <div class="col-8 col-sm-7 col-md-5">
-                    <div class="menu-card-dsktp">
-                        <div class="card__side menu-card-dsktp--front">
-                            <h5 class="card-title">La balade de Ferdy la fourmi</h5>
-                            <div class="card-body--front">
-                                <p class="card-text ">Tataki de fourmis rouge et confit de termites</p>
-                                <div class="menu-icon">
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                </div>
-                                <p class="card-text ">Espuma de coléoptère et brochettes de Gâte-bois</p>
-
-                                <div class="menu-icon">
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                </div>
-                                <p class="card-text ">Chamallows chocolat-cloporte, crème vanille</p>
-                                <button type="button " class="btn btn-outline-secondary">RÉSERVER</button>
-                            </div>
+                <div class="col7 col-sm-5">
+                    <div class="card">
+                        <h5 class="card-title">La balade de Ferdy la fourmi</h5>
+                        <p class="card-text ">Tataki de fourmis rouge et confit de termites</p>
+                        <div class="menu-icon">
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
                         </div>
-                        <div class="card__side menu-card-dsktp--back">
-                            <h5 class="card-title">Hommage à Jemini</h5>
-                            <div class="card-body--front">
-                                <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
-                                <div class="menu-icon">
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                </div>
-                                <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
-
-                                <div class="menu-icon">
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                    <icon class="ion-android-star-outline"></icon>
-                                </div>
-                                <p class="card-text ">Verrines d'hiver aux molitors </p>
-                                <button type="button " class="btn btn-outline-secondary">RÉSERVER</button>
-                            </div>
-
-
+                        <p class="card-text ">Espuma de coléoptère et brochettes de Gâte-bois</p>
+                        <div class="menu-icon">
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
                         </div>
+                        <p class="card-text ">Chamallows chocolat-cloporte, crème vanille</p>
+                        <div class="menu-prix-dsktp">
+                            <icon class="ion-ios-more-outline"></icon> 59&euro;
+                            <icon class="ion-ios-more-outline"></icon>
+                        </div>
+                        <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="card">
+                        <h5 class="card-title">Hommage à Jemini</h5>
+                        <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
+                        <div class="menu-icon">
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                        </div>
+                        <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
+                        <div class="menu-icon">
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                            <icon class="ion-android-star-outline"></icon>
+                        </div>
+                        <p class="card-text ">Verrines d'hiver aux molitors </p>
+                        <div class="menu-prix-dsktp">
+                            <icon class="ion-ios-more-outline"></icon> 59&euro;
+                            <icon class="ion-ios-more-outline"></icon>
+                        </div>
+                        <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
 
 
     </section>
+
+    <!-- SECTION MENUS POUR DESKTOP -->
 
     <section id="menudsktp" class="container-fluid d-none d-lg-block">
 
@@ -291,8 +295,16 @@
                             </div>
                         </div>
                         <div class="card__side menu-card-dsktp--back">
-                            <div class="menu-prix-dsktp">59&euro;</div>
-                            <button type="button " class="btn btn-outline-secondary menu-button-dsktp">RÉSERVER</button>
+                            <p class="presentation_menu">Julien vous emmène dans son enfance, les courses dans les herbes hautes en culotte courte, les
+                                criquets volants de part et d'autre. Vous entendez l'été à travers ses déclarations de saveurs
+                                subtiles.
+                            </p>
+                            <p class="condition-menu">Uniquement le midi</p>
+                            <div class="menu-prix-dsktp">
+                                <icon class="ion-ios-more-outline"></icon> 59&euro;
+                                <icon class="ion-ios-more-outline"></icon>
+                            </div>
+                            <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
 
                         </div>
                     </div>
@@ -319,8 +331,15 @@
                             </div>
                         </div>
                         <div class="card__side menu-card-dsktp--back">
-                            <div class="menu-prix-dsktp">79&euro;</div>
-                            <button type="button " class="btn btn-outline-secondary menu-button-dsktp">RÉSERVER</button>
+                            <p class="presentation_menu">Rencontrer, échanger, partager. Telle est la volonté du chef qui s'inspire du vivant pour vous
+                                transmettre ses valeurs. Voici les fourmis pour vous ouvrir sur le monde.</p>
+                            <p class="condition-menu">Proposé le soir</p>
+                            <div class="menu-prix-dsktp">
+                                <icon class="ion-ios-more-outline"></icon> 89&euro;
+                                <icon class="ion-ios-more-outline"></icon>
+                            </div>
+                            <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
+
                         </div>
                     </div>
                 </div>
@@ -557,6 +576,7 @@
         crossorigin="anonymous "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
         crossorigin="anonymous "></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
