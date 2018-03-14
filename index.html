@@ -205,77 +205,20 @@
                 </div>
             </div>
         </div>
-
-    </section>
-    <section id="menu" class="container-fluid d-xl-none d-lg-none">
-        <div class="container menu-container">
-            <h4 class="menu-h4">NOS MENUS</h4>
-            <h2 class="menu-h2">Gastronomie inventive</h2>
-            <div class="row justify-content-center text-center margin-up ">
-                <div class="col7 col-sm-5">
-                    <div class="card">
-                        <h5 class="card-title">La balade de Ferdy la fourmi</h5>
-                        <p class="card-text ">Tataki de fourmis rouge et confit de termites</p>
-                        <div class="menu-icon">
-                            <icon class="ion-android-star-outline"></icon>
-                            <icon class="ion-android-star-outline"></icon>
-                            <icon class="ion-android-star-outline"></icon>
-                        </div>
-                        <p class="card-text ">Espuma de coléoptère et brochettes de Gâte-bois</p>
-                        <div class="menu-icon">
-                            <icon class="ion-android-star-outline"></icon>
-                            <icon class="ion-android-star-outline"></icon>
-                            <icon class="ion-android-star-outline"></icon>
-                        </div>
-                        <p class="card-text ">Chamallows chocolat-cloporte, crème vanille</p>
-                        <div class="menu-prix-dsktp">
-                            <icon class="ion-ios-more-outline"></icon> 59&euro;
-                            <icon class="ion-ios-more-outline"></icon>
-                        </div>
-                        <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
-                    </div>
-                </div>
-                <div class="col-sm-5">
-                    <div class="card">
-                        <h5 class="card-title">Hommage à Jemini</h5>
-                        <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
-                        <div class="menu-icon">
-                            <icon class="ion-android-star-outline"></icon>
-                            <icon class="ion-android-star-outline"></icon>
-                            <icon class="ion-android-star-outline"></icon>
-                        </div>
-                        <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
-                        <div class="menu-icon">
-                            <icon class="ion-android-star-outline"></icon>
-                            <icon class="ion-android-star-outline"></icon>
-                            <icon class="ion-android-star-outline"></icon>
-                        </div>
-                        <p class="card-text ">Verrines d'hiver aux molitors </p>
-                        <div class="menu-prix-dsktp">
-                            <icon class="ion-ios-more-outline"></icon> 59&euro;
-                            <icon class="ion-ios-more-outline"></icon>
-                        </div>
-                        <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-
-
     </section>
 
-    <!-- SECTION MENUS POUR DESKTOP -->
 
-    <section id="menudsktp" class="container-fluid d-none d-lg-block">
+    <!-- SECTION MENUS -->
+    <!--POUR ECRANS TACTILES AVEC JQUERY -->
+    <section id="menu" class="container-fluid">
 
-        <div class="container menu-container">
+        <div class="container menu-container d-lg-none menumob">
             <h4 class="menu-h4">NOS MENUS</h4>
             <h2 class="menu-h2">Gastronomie inventive</h2>
-            <div class="row justify-content-md-center text-center margin-up ">
-                <div class="col-md-6 col-lg-4">
-                    <div class="menu-card-dsktp">
-                        <div class="card__side menu-card-dsktp--front">
+            <div class="row justify-content-center text-center">
+                <div class="col-12 col-sm-6">
+                    <div class="flippy menu-card-dsktp">
+                        <div class="front card__side menu-card-dsktp--front">
                             <h5 class="card-title">Hommage à Jemini</h5>
                             <div class="card-body--front">
                                 <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
@@ -285,7 +228,86 @@
                                     <icon class="ion-android-star-outline"></icon>
                                 </div>
                                 <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
+                                <div class="menu-icon">
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                </div>
+                                <p class="card-text ">Verrines d'hiver aux molitors </p>
+                                <div class="call-action-button">
+                                    PLUS&nbsp;
+                                    <icone class="ion-arrow-right-c"></icone>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back card__side menu-card-dsktp--back">
+                            <p class="presentation_menu">Julien vous emmène dans son enfance, les courses dans les herbes hautes en culotte courte, les
+                                criquets volants de part et d'autre. Vous entendez l'été à travers ses déclarations de saveurs
+                                subtiles.
+                            </p>
+                            <p class="condition-menu">Uniquement le midi</p>
+                            <div class="menu-prix-dsktp">
+                                <icon class="ion-ios-more-outline"></icon> 59&euro;
+                                <icon class="ion-ios-more-outline"></icon>
+                            </div>
+                            <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark   ">Réserver</button>
+                        <icon class="ion-close"></icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="flippy menu-card-dsktp">
+                        <div class="front card__side menu-card-dsktp--front">
+                            <h5 class="card-title">La balade de Ferdy la fourmi</h5>
+                            <div class="card-body--front">
+                                <p class="card-text ">Tataki de fourmis rouge et confit de termites</p>
+                                <div class="menu-icon">
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                </div>
+                                <p class="card-text ">Espuma de coléoptère et brochettes de Gâte-bois</p>
+                                <div class="menu-icon">
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                </div>
+                                <p class="card-text ">Chamallows chocolat-cloporte, crème vanille</p>
+                            </div>
+                        </div>
+                        <div class="back card__side menu-card-dsktp--back">
+                            <p class="presentation_menu">Rencontrer, échanger, partager. Telle est la volonté du chef qui s'inspire du vivant pour vous
+                                transmettre ses valeurs. Voici les fourmis pour vous ouvrir sur le monde.</p>
+                            <p class="condition-menu">Proposé le soir</p>
+                            <div class="menu-prix-dsktp">
+                                <icon class="ion-ios-more-outline"></icon> 89&euro;
+                                <icon class="ion-ios-more-outline"></icon>
+                            </div>
+                            <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- POUR ORDI BUREAU AVEC CSS -->
+
+        <div class="container menu-container d-none d-lg-block">
+            <h4 class="menu-h4">NOS MENUS</h4>
+            <h2 class="menu-h2">Gastronomie inventive</h2>
+            <div class="row justify-content-md-center text-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="menu-card-dsktp">
+                        <div class="card__side menu-card-dsktp--front css-front">
+                            <h5 class="card-title">Hommage à Jemini</h5>
+                            <div class="card-body--front">
+                                <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
+                                <div class="menu-icon">
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                </div>
+                                <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
                                 <div class="menu-icon">
                                     <icon class="ion-android-star-outline"></icon>
                                     <icon class="ion-android-star-outline"></icon>
@@ -294,7 +316,7 @@
                                 <p class="card-text ">Verrines d'hiver aux molitors </p>
                             </div>
                         </div>
-                        <div class="card__side menu-card-dsktp--back">
+                        <div class="card__side menu-card-dsktp--back css-back">
                             <p class="presentation_menu">Julien vous emmène dans son enfance, les courses dans les herbes hautes en culotte courte, les
                                 criquets volants de part et d'autre. Vous entendez l'été à travers ses déclarations de saveurs
                                 subtiles.
@@ -305,13 +327,12 @@
                                 <icon class="ion-ios-more-outline"></icon>
                             </div>
                             <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
-
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="menu-card-dsktp">
-                        <div class="card__side menu-card-dsktp--front">
+                        <div class="card__side menu-card-dsktp--front css-front">
                             <h5 class="card-title">La balade de Ferdy la fourmi</h5>
                             <div class="card-body--front">
                                 <p class="card-text ">Tataki de fourmis rouge et confit de termites</p>
@@ -321,7 +342,6 @@
                                     <icon class="ion-android-star-outline"></icon>
                                 </div>
                                 <p class="card-text ">Espuma de coléoptère et brochettes de Gâte-bois</p>
-
                                 <div class="menu-icon">
                                     <icon class="ion-android-star-outline"></icon>
                                     <icon class="ion-android-star-outline"></icon>
@@ -330,7 +350,7 @@
                                 <p class="card-text ">Chamallows chocolat-cloporte, crème vanille</p>
                             </div>
                         </div>
-                        <div class="card__side menu-card-dsktp--back">
+                        <div class="card__side menu-card-dsktp--back css-back">
                             <p class="presentation_menu">Rencontrer, échanger, partager. Telle est la volonté du chef qui s'inspire du vivant pour vous
                                 transmettre ses valeurs. Voici les fourmis pour vous ouvrir sur le monde.</p>
                             <p class="condition-menu">Proposé le soir</p>
@@ -339,12 +359,10 @@
                                 <icon class="ion-ios-more-outline"></icon>
                             </div>
                             <button type="button" data-toggle="modal" data-target="#reservationModale" class="btn btn-lg btn-dark">Réserver</button>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
     </section>
@@ -570,12 +588,13 @@
     <footer>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
-        crossorigin="anonymous "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
         crossorigin="anonymous "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
         crossorigin="anonymous "></script>
+    <script src="jquery.flip.min.js"></script>
+    <script src="essai.js"></script>
     <script src="script.js"></script>
 </body>
 
