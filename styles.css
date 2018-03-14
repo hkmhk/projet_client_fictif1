@@ -22,69 +22,6 @@ h5 {
 .container {
   margin-top: 10vh;
 }
-
-/*////////////////////////////////////////
-//                                      //
-//            SECTION ENTETE            //
-//                                      //
-////////////////////////////////////////*/
-
-#entete {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.3) 150px,
-      rgba(0, 0, 0, 0.3)
-    ),
-    url(media/enteteBugCookers.jpg);
-  background-size: cover;
-  width: 100%;
-  min-height: 100vh;
-  background-position: center;
-}
-#entete .couverture {
-  min-height: 100vh;
-}
-.db {
-  background-color: aqua;
-  border: 1px aqua dotted;
-}
-
-#grandLogo {
-  margin-bottom: 30px;
-}
-#reserverBtn {
-  background-color: #0d1226;
-  border: #fff 3px solid;
-  border-radius: 0;
-  padding: 10px 40px 10px 40px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-#reserverBtn:hover {
-  background-color: #19213f;
-}
-#entete .nav-item {
-  text-transform: uppercase;
-}
-#entete .nav-link {
-  color: #fff;
-}
-#entete .nav-link:hover {
-  color: #b4bebf;
-}
-#fReservation h2 {
-  font-size: 2em;
-}
-.pillsReservation {
-  background-color: #fff;
-  border: #0d1226 3px solid;
-  border-radius: 0;
-  text-transform: uppercase;
-  font-weight: regular;
-  font-size: 2rem;
-  min-width: 90px;
-}
 /*////////////////////////////////////////
 //                                       //
 //            SECTION ABOUT              //
