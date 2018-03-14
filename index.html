@@ -18,7 +18,6 @@
 
 <body>
 
-
     <header id="entete" class="container-fluid">
         <!-- BOUTON QUI S'AFFICHE SI ON EST SUR MOBILE-->
         <nav class="navbar navbar-expand-md justify-content-between sticky-top">
@@ -79,57 +78,60 @@
                     <form id="fReservation" class="">
                         <ul class="nav nav-tabs nav-justified" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="combien-tab" data-toggle="tab" href="#combien" role="tab" aria-controls="combien" aria-selected="true"
-                                    href="#">Combien</a>
+                                <a class="nav-link active" id="combien-tab" data-toggle="tab" href="#combien" role="tab" aria-controls="combien" aria-selected="true">Nombre</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" id="quand-tab" data-toggle="tab" href="#quand" role="tab" aria-controls="quand" aria-selected="false"
-                                    href="#">Quand</a>
+                                <a class="nav-link" id="jour-tab" data-toggle="tab" href="#jour" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
                             </li>
-                            <li class="nav-item disabled">
-                                <a class="nav-link disabled disabled" id="qui-tab" data-toggle="tab" href="#qui" role="tab" aria-controls="qui" aria-selected="false"
-                                    href="#">Qui</a>
+                            <li class="nav-item">
+                                <a class="nav-link" id="heure-tab" data-toggle="tab" href="#heure" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="nom-tab" data-toggle="tab" href="#nom" role="tab" aria-controls="nom" aria-selected="false">Qui</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="contenuTab">
                             <!-- TAB PANE COMBIEN ? -->
                             <div class="tab-pane fade show active" id="combien" role="tabpanel" aria-labelledby="combien-tab">
                                 <h2 class="text-center mt-5 mb-3">Pour combien de personnes ?</h2>
-                                <ul class="nav nav-pills d-flex justify-content-center">
-                                    <li class="nav-item text-center mb-3">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">1</a>
-                                    </li>
-                                    <li class="nav-item text-center mb-3">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">2</a>
-                                    </li>
-                                    <li class="nav-item text-center mb-3">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">3</a>
-                                    </li>
-                                    <li class="nav-item text-center mb-3">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">4</a>
-                                    </li>
-                                    <li class="nav-item text-center mb-3">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">5</a>
-                                    </li>
-                                    <li class="nav-item text-center mb-3">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">6</a>
-                                    </li>
-                                    <li class="nav-item text-center mb-3">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">7</a>
-                                    </li>
-                                    <li class="nav-item text-center mb-3">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 mr-4 pillsReservation" href="#">8</a>
-                                    </li>
-                                </ul>
+                                <div class="row d-flex justify-content-center">
+
+                                    <div class="col-3 text-center mb-4">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">1</a>
+                                    </div>
+                                    <div class="col-3 text-center mb-4">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">2</a>
+                                    </div>
+                                    <div class="col-3 text-center mb-4">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">3</a>
+                                    </div>
+                                    <div class="col-3 text-center mb-4">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">4</a>
+                                    </div>
+                                    <div class="col-3 text-center mb-4">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">5</a>
+                                    </div>
+                                    <div class="col-3 text-center mb-4">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">6</a>
+                                    </div>
+                                    <div class="col-3 text-center mb-4">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">7</a>
+                                    </div>
+                                    <div class="col-3 text-center mb-4">
+                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">8</a>
+                                    </div>
+
+                                </div>
                             </div>
                             <!-- TAB PANE QUAND ? -->
-                            <div class="tab-pane fade">
+                            <div class="tab-pane fade" id="jour" role="tabpanel" aria-labelledby="jour-tab">
                                 <h2 class="text-center mt-5">Pour quel jour ?</h2>
                                 <div>Calendrier</div>
                                 <button>Précédent</button>
                             </div>
                             <!-- TAB PANE QUELLE HEURE ? -->
-                            <div class="tab-pane fade" <h2 class="text-center mt-5">Pour quelle heure ?</h2>
+                            <div class="tab-pane fade" id="heure" role="tabpanel" aria-labelledby="heure-tab">
+                                <h2 class="text-center mt-5">Pour quelle heure ?</h2>
                                 <div>Midi</div>
                                 <ul>
                                     <li>11h30</li>
@@ -150,7 +152,8 @@
                                 <button>Précédent</button>
                             </div>
                             <!-- TAB PANE NOM ? -->
-                            <div class="form-group tab-pane fade">
+                            <div class="form-group tab-pane fade" id="nom" role="tabpanel" aria-labelledby="nom-tab">
+
                                 <h2 class="text-center mt-5">A quel nom ?</h2>
                                 <input type="text" class="form-control-lg" placeholder="Nom">
                                 <input type="text" class="form-control-lg" placeholder="Adresse email">
@@ -171,17 +174,17 @@
                         </div>
                     </form>
                 </div>
-            </div>
-            <div>
-                <button>Continuer</button>
+                <div class="row m-4">
+                    <div class="col">
+                        <button type="button" class="btn btn-dark">Continuer</button>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 
     <section id="apropos" class="container-fluid">
-
-
         <div class="container apropos-container">
 
             <div class="row">
@@ -202,67 +205,61 @@
         </div>
 
     </section>
-
     <section id="menu" class="container-fluid d-xl-none d-lg-none">
 
         <div class="container menu-container">
             <h4 class="menu-h4">NOS MENUS</h4>
             <h2 class="menu-h2">Gastronomie inventive</h2>
-            <div class="row justify-content-sm-center text-center margin-up ">
-                <div class="col-sm-6 col-lg-5">
-                    <div class="card menu-card">
-                        <div class="card-body ">
+            <div class="row justify-content-center text-center margin-up ">
+                <div class="col-8 col-sm-7 col-md-5">
+                    <div class="menu-card-dsktp">
+                        <div class="card__side menu-card-dsktp--front">
+                            <h5 class="card-title">La balade de Ferdy la fourmi</h5>
+                            <div class="card-body--front">
+                                <p class="card-text ">Tataki de fourmis rouge et confit de termites</p>
+                                <div class="menu-icon">
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                </div>
+                                <p class="card-text ">Espuma de coléoptère et brochettes de Gâte-bois</p>
 
-                            <h5 class="card-title">Hommage à Jemini</h5>
-                            <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
-                            <div class="menu-icon">
-                                <icon class="ion-android-star-outline"></icon>
-                                <icon class="ion-android-star-outline"></icon>
-                                <icon class="ion-android-star-outline"></icon>
+                                <div class="menu-icon">
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                    <icon class="ion-android-star-outline"></icon>
+                                </div>
+                                <p class="card-text ">Chamallows chocolat-cloporte, crème vanille</p>
+                                <button type="button " class="btn btn-outline-secondary">RÉSERVER</button>
                             </div>
-                            <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
-
-                            <div class="menu-icon">
-                                <icon class="ion-android-star-outline"></icon>
-                                <icon class="ion-android-star-outline"></icon>
-                                <icon class="ion-android-star-outline"></icon>
-                            </div>
-                            <p class="card-text ">Verrines d'hiver aux molitors </p>
-                            <p class="menu-prix">96&euro;</p>
-
                         </div>
-                        <button type="button " class="btn btn-outline-secondary menu-button">RÉSERVER</button>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-lg-5 ">
-                    <div class="card menu-card">
-                        <div class="card-body ">
-
-                            <h5 class="card-title">Hommage à Jemini</h5>
-                            <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
-                            <div class="menu-icon">
-                                <icon class="ion-android-star-outline"></icon>
-                                <icon class="ion-android-star-outline"></icon>
-                                <icon class="ion-android-star-outline"></icon>
-                            </div>
-                            <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
-
-                            <div class="menu-icon">
-                                <icon class="ion-android-star-outline"></icon>
-                                <icon class="ion-android-star-outline"></icon>
-                                <icon class="ion-android-star-outline"></icon>
-                            </div>
-                            <p class="card-text ">Verrines d'hiver aux molitors </p>
-                            <p class="menu-prix">96&euro;</p>
-
+                        <div class="card__side menu-card-dsktp--back">
+                                <h5 class="card-title">Hommage à Jemini</h5>
+                                <div class="card-body--front">
+                                    <p class="card-text ">Bruschettas aux criquets et salade de saison</p>
+                                    <div class="menu-icon">
+                                        <icon class="ion-android-star-outline"></icon>
+                                        <icon class="ion-android-star-outline"></icon>
+                                        <icon class="ion-android-star-outline"></icon>
+                                    </div>
+                                    <p class="card-text ">Bug burger au steak d'insectes et frites de patates douces</p>
+    
+                                    <div class="menu-icon">
+                                        <icon class="ion-android-star-outline"></icon>
+                                        <icon class="ion-android-star-outline"></icon>
+                                        <icon class="ion-android-star-outline"></icon>
+                                    </div>
+                                    <p class="card-text ">Verrines d'hiver aux molitors </p>
+                                    <button type="button " class="btn btn-outline-secondary">RÉSERVER</button>
+                                </div>
+                            
+                            
                         </div>
-                        <button type="button " class="btn btn-outline-secondary menu-button">RÉSERVER</button>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+        
 
     </section>
 
@@ -272,7 +269,7 @@
             <h4 class="menu-h4">NOS MENUS</h4>
             <h2 class="menu-h2">Gastronomie inventive</h2>
             <div class="row justify-content-md-center text-center margin-up ">
-                <div class="col-sm-4 ">
+                <div class="col-md-6 col-lg-4">
                     <div class="menu-card-dsktp">
                         <div class="card__side menu-card-dsktp--front">
                             <h5 class="card-title">Hommage à Jemini</h5>
@@ -300,7 +297,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 ">
+                <div class="col-md-6 col-lg-4">
                     <div class="menu-card-dsktp">
                         <div class="card__side menu-card-dsktp--front">
                             <h5 class="card-title">La balade de Ferdy la fourmi</h5>
@@ -333,10 +330,10 @@
 
     </section>
 
-
     <!-- ===== Section blog ===== -->
 
     <section id="blog">
+
 
 
         <div class="container ">
@@ -352,6 +349,7 @@
                         <div class="card-body ">
                             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                             <h5 class="card-title left">Recette aux insectes</h5>
+
 
                             <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
@@ -384,7 +382,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- == Modals == -->
             <!-- Modal card left-->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -473,7 +470,6 @@
             <div class="text-center ">
                 <button type="button " class="btn btn-outline-secondary margin-up ">TOUTES LES ACTUALITÉS</button>
             </div>
-
         </div>
 
     </section>

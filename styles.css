@@ -6,14 +6,21 @@ body {
 }
 
 h1,
-h5,
-h4 {
+h5 {
   text-align: center;
   font-family: "Merriweather", serif;
 }
 
 .left {
   text-align: left;
+}
+
+.margin-up {
+  margin-top: 5vh;
+}
+
+.container {
+  margin-top: 10vh;
 }
 
 /*////////////////////////////////////////
@@ -35,13 +42,12 @@ h4 {
   min-height: 100vh;
   background-position: center;
 }
-
 #entete .couverture {
   min-height: 100vh;
 }
 .db {
   background-color: aqua;
-  boder: 1px aqua dotted;
+  border: 1px aqua dotted;
 }
 
 #grandLogo {
@@ -79,7 +85,6 @@ h4 {
   font-size: 2rem;
   min-width: 90px;
 }
-
 /*////////////////////////////////////////
 //                                       //
 //            SECTION ABOUT              //
@@ -87,7 +92,7 @@ h4 {
 ////////////////////////////////////////*/
 
 #apropos {
-  padding: 3rem 0;
+  padding: 2rem 0 3rem 0;
   background-color: rgb(245, 245, 245);
 }
 
@@ -133,6 +138,7 @@ h4 {
 
 .menu-container {
   text-align: center;
+  padding-bottom: 2rem;
 }
 
 .menu-h2 {
@@ -240,9 +246,14 @@ h4 {
   color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
+
 .menu-button-dsktp {
   position: absolute;
   bottom: 2rem;
+}
+
+.card-title {
+  padding: 0 1.5rem;
 }
 
 /*////////////////////////////////////////
