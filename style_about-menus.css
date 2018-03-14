@@ -93,11 +93,10 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 30em;
-}
-
-.menu-card-dsktp:first-child {
   margin-bottom: 2rem;
 }
+
+
 
 .card__side {
   padding-top: 2rem;
@@ -134,6 +133,10 @@
 .card-body--front {
   padding: 2rem 2rem;
 }
+.card-body--front:last-child {
+  padding: 1rem 2rem;
+}
+
 
 .menu-prix-dsktp {
   margin: 1rem 3rem;
@@ -160,6 +163,11 @@
   font-weight: bold;
 }
 
+.p-back2 > .condition-menu {
+  margin-top: 3rem;
+}
+
+
 .call-action-button {
   margin-top: 3rem;
   margin-left: 60%;
@@ -170,5 +178,13 @@
   background-color: rgba(0, 0, 0, 0.25); 
 }
 
+.ion-close-circled {
+  position: absolute;
+  font-size: 2rem;
+  right: 1rem;
+  top: 1rem;
+  color: rgba(0, 0, 0, 0.70);
+
+}
 
 
