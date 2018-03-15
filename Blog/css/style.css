@@ -1,11 +1,11 @@
 
 
 header {
-  height: 600px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.377),rgba(0, 0, 0, 0.377)), url(../img/bann.jpg);
+  height: 22rem;
+  background-image: url(/home/wilder/wcs/Blog/img/bgheader.jpg); 
+  background-size: cover;
   
-}
-img {
+} {
   border-radius: 5px;
   box-shadow: 4px 4px rgb(197, 197, 197);
   
@@ -21,4 +21,7 @@ header h1
     color: rgb(176, 176, 192);
 }
 
-.button-group filter-button-group
+#logo_button
+{
+  padding: 2rem;
+}
