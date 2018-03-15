@@ -5,175 +5,186 @@
 ////////////////////////////////////////*/
 
 #apropos {
-    padding: 2rem 0 3rem 0;
-    background-color: rgb(245, 245, 245);
-  }
-  
-  .apropos-container {
-    width: 70%;
-  }
-  
-  .apropos-h2 {
-    font-size: 2rem;
-  }
-  
-  .apropos-h4 {
-    font-size: 1rem;
-  }
-  
-  .apropos-h5 {
-    margin: 0;
-    padding: 0.5rem 0;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  .apropos-p {
-    font-size: 1rem;
-  }
-  
-  .img_about {
-    border-radius: 2px;
-    box-shadow: 3px 3px rgb(201, 201, 201);
-  }
-  
-  /*////////////////////////////////////////
+  padding: 3rem 0 2rem 0;
+  background-color: rgb(245, 245, 245);
+}
+
+.apropos-container {
+  width: 75%;
+}
+
+.apropos-h2 {
+  font-size: 2rem;
+}
+
+.apropos-h4 {
+  font-size: 1rem;
+}
+
+.apropos-h5 {
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.apropos-p {
+  font-size: 1rem;
+}
+
+.img_about {
+  border-radius: 2px;
+  box-shadow: 3px 3px rgb(201, 201, 201);
+}
+
+/*////////////////////////////////////////
   //                                       //
   //            SECTION MENU              //
   //                                      //
   ////////////////////////////////////////*/
-  
-  #menu {
-    padding: 4rem 0;
-    background-image: url(media/bckgrnd_menus.jpg);
-    background-size: cover;
-  }
-  
-  .menu-container {
-    text-align: center;
-    padding-bottom: 2rem;
-  }
-  
-  .menu-h2 {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 2rem;
-    font-family: "Merriweather", serif;
-    padding-bottom: 2rem;
-  }
-  
-  .card-title {
-    padding-bottom: 1rem;
-  }
-  
-  .menu-h4 {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
-    font-family: "Merriweather", serif;
-  }
-  
-  .menu-icon {
-    padding-bottom: 1rem;
-  }
-  
-  .menu-card {
-    font-weight: 600;
-    margin: 1.5rem;
-    padding: 0 0.5rem;
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .menu-prix {
-    margin: 0;
-    font-size: 2rem;
-    color: rgb(98, 100, 100);
-  }
-  
-  .menu-button {
-    margin-bottom: 1.5rem;
-    transition: all 0.4s;
-  }
-  
-  .menu-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 1px;
-  }
-  
-  /*////////////////////////////////////////
-  //                                       //
-  //            SECTION FlIPPING           //
-  //                                      //
-  ////////////////////////////////////////*/
-  
-  #menudsktp {
-    padding: 3rem 3rem;
-    background-image: url(media/bckgrnd_menus.jpg);
-    background-size: cover;
-  }
-  .menu-card-dsktp {
-    perspective: 150rem;
-    -moz-perspective: 150rem;
-    position: relative;
-    height: 32rem;
-  }
-  
-  .card__side {
-    padding-top: 2rem;
-    height: 32rem;
-    transition: all 1s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    backface-visibility: hidden;
-    border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  }
-  
-  .menu-card-dsktp--back {
-    position: relative;
-    transform: rotateY(180deg);
-    padding-top: 10%;
-  }
-  
-  .menu-card-dsktp:hover .menu-card-dsktp--front {
-    transform: rotateY(-180deg);
-  }
-  
-  .menu-card-dsktp:hover .menu-card-dsktp--back {
-    transform: rotateY(0deg);
-  }
-  
-  .menu-card-dsktp--front {
-    padding-top: 4rem;
-  }
-  
-  .card-body--front {
-    padding: 3rem 2rem;
-  }
-  
-  .menu-prix-dsktp {
-    margin: 2rem 3rem;
-    font-size: 2rem;
-    color: rgba(247, 139, 39, 0.9);
-    border-radius: 5px;
-  }
-  
-  .card-title {
-    padding: 0 1.5rem;
-  }
 
-  .presentation_menu {
-      font-style: italic;
-      padding: .5 2.5rem .5rem 2rem;
-  }
+#menu {
+  padding: 3rem 1rem;
+  background-image: url(media/bckgrnd_menus.jpg);
+  background-size: cover;
+}
 
-  .condition-menu {
-      padding: .5rem;
-      margin: 1rem 5rem;
-      background-color: rgba(0, 0, 0, 0.40);
-      color: rgba(255, 255, 255, 0.9);
-      border-radius: 5px;
-      font-weight: bold;
-  }
-  
+.menu-container {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.menu-h2 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  padding-bottom: 2rem;
+}
+
+.card-title {
+  padding-bottom: 1rem;
+}
+
+.menu-h4 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  font-family: "Merriweather", serif;
+}
+
+.menu-icon {
+  padding-bottom: 1rem;
+}
+
+.menu-card {
+  font-weight: 600;
+  margin: 1.5rem;
+  padding: 0 0.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.menu-prix {
+  margin: 0;
+  font-size: 2rem;
+  color: rgb(98, 100, 100);
+}
+
+.menu-card-dsktp {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 30em;
+  margin-bottom: 2rem;
+}
+
+
+
+.card__side {
+  padding-top: 2rem;
+  height: 30rem;
+  transition: all 1s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.menu-card-dsktp--back {
+  position: relative;
+  transform: rotateY(180deg);
+  padding-top: 10%;
+}
+
+.menu-card-dsktp:hover .css-front {
+  transform: rotateY(-180deg);
+}
+
+.menu-card-dsktp:hover .css-back {
+  transform: rotateY(0deg);
+}
+
+.menu-card-dsktp--front {
+  padding-top: 2.5rem;
+}
+
+.card-body--front {
+  padding: 2rem 2rem;
+}
+.card-body--front:last-child {
+  padding: 1rem 2rem;
+}
+
+
+.menu-prix-dsktp {
+  margin: 1rem 3rem;
+  font-size: 2rem;
+  color: rgba(247, 139, 39, 0.9);
+  border-radius: 5px;
+}
+
+.card-title {
+  padding: 0 1.5rem;
+}
+
+.presentation_menu {
+  font-style: italic;
+  padding: 0.5 2.5rem 0.5rem 2rem;
+}
+
+.condition-menu {
+  padding: 0.5rem;
+  margin: 1rem 5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.p-back2 > .condition-menu {
+  margin-top: 3rem;
+}
+
+
+.call-action-button {
+  margin-top: 3rem;
+  margin-left: 60%;
+  padding: .5rem 1rem;
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.25); 
+}
+
+.ion-close-circled {
+  position: absolute;
+  font-size: 2rem;
+  right: 1rem;
+  top: 1rem;
+  color: rgba(0, 0, 0, 0.70);
+
+}
+
+
