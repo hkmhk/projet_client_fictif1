@@ -7,6 +7,5 @@ $(document).ready(function(){
     $('.navbutton__link').click(function(){
         document.querySelector(".navbutton__checkbox").checked = false;
     });
-
       
 });

@@ -63,3 +63,7 @@
 body {
   position: relative;
 }
+
+#grandLogo {
+  animation-duration: 5s;
+}
