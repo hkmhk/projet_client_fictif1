@@ -24,25 +24,27 @@
 
     <!-- Navigation Bouton -->
 
-    <div class="navbutton">
+    <div class="navbutton d-xl-none">
+        
         <input type="checkbox" class="navbutton__checkbox" id="switchToMenu">
 
-        <label for="switchToMenu" class="navbutton__button">MENU</label>
+        <label for="switchToMenu" class="navbutton__button"><span class="navbutton__icon icon-open"><icon class="ion-navicon-round"></icon></span><span class="navbutton__icon icon-close"><icon class="ion-close-round"></icon></span></label>
 
         <div class="navbutton__background">&nbsp;</div>
 
         <nav class="navbutton__nav">
             <ul class="navbutton__list">
-                <li class="navbutton__item"><a href="#" class="navbutton__link">Home</a></li>
-                <li class="navbutton__item"><a href="#" class="navbutton__link">A propos</a></li>
-                <li class="navbutton__item"><a href="#" class="navbutton__link">Menus</a></li>
-                <li class="navbutton__item"><a href="#" class="navbutton__link">Infos</a></li>
+                <li class="navbutton__item"><a href="#entete" class="navbutton__link">Accueil</a></li>
+                <li class="navbutton__item"><a href="#apropos" class="navbutton__link">A propos</a></li>
+                <li class="navbutton__item"><a href="#menu" class="navbutton__link">Menus</a></li>
+                <li class="navbutton__item"><a href="#blog" class="navbutton__link">Blog</a></li>
+                <li class="navbutton__item"><a href="#infos" class="navbutton__link">Infos</br> Pratiques</a></li>
             </ul>
         </nav>
 
     </div>
     <!-- BOUTON QUI S'AFFICHE SI ON EST SUR MOBILE-->
-    <nav class="navbar navbar-expand-md justify-content-between navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-md justify-content-between navbar-dark fixed-top d-none d-xl-block">
 
         <a class="navbar-brand pt-2" href="#">
             <img class="img-fluid" src="media/logoBugCookersNav.png" />
@@ -319,7 +321,7 @@
 
         <!-- POUR ORDI BUREAU AVEC CSS -->
 
-        <div class="container menu-container d-none d-lg-block">
+        <div id="menudsktp" class="container menu-container d-none d-lg-block">
             <h4 class="menu-h4">NOS MENUS</h4>
             <h2 class="menu-h2">Gastronomie inventive</h2>
             <div class="row justify-content-md-center text-center">
