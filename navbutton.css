@@ -11,6 +11,7 @@
   right: 6rem;
   border-radius: 50%;
   z-index: 100;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .navbutton__background {
@@ -22,50 +23,66 @@
   right: 6.5rem;
   background-image: radial-gradient(rgb(177, 177, 177), rgb(56, 56, 56));
   z-index: 50;
+  transition: transform .7s cubic-bezier(.86, 0, 0.07, 1);
 
-  transform: scale(50);
+  /*transform: scale(50);*/
 }
 
 .navbutton__nav {
   height: 100vh;
-  width: 100%;
+  width: 0; /*we're setting our apparition animation*/
+  opacity: 0;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 70;
+  transition: all .8s;
 }
 
 .navbutton__list {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    list-style: none;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
 }
 
 .navbutton__item {
-    margin: 1rem;
+  margin: 1rem;
 }
 
-.navbutton__link:link, 
+.navbutton__link:link,
 .navbutton__link:visited {
-    display: inline-block;
-    font-size: 3rem;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase; 
-    padding: 0 1rem;;
-    background-image: linear-gradient(150deg,transparent 0%, transparent 50%, rgb(112, 112, 112) 50%);
-    background-size: 300%;
-    transition: all .4s;
+  display: inline-block;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 1rem;
+  background-image: linear-gradient(
+    150deg,
+    transparent 0%,
+    transparent 50%,
+    rgb(112, 112, 112) 50%
+  );
+  background-size: 300%;
+  transition: all 0.4s;
 }
 
 .navbutton__link:hover,
 .navbutton__link:active {
-    background-position: 100%;
-    transform: translateX(.5rem);
+  background-position: 100%;
+  transform: translateX(0.5rem);
+}
 
+.navbutton__checkbox:checked ~ .navbutton__background {
+  transform: scale(80);
+}
+
+.navbutton__checkbox:checked ~ .navbutton__nav {
+  opacity: 1;
+  width: 100%;
 }
