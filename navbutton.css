@@ -1,0 +1,139 @@
+.navbutton__checkbox {
+  display: none;
+}
+
+.navbutton__button {
+  background-color: rgb(231, 227, 227);
+  height: 3rem;
+  width: 3rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  border-radius: 50%;
+  z-index: 100;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding-top: .5rem;
+  font-size: 2rem;
+  transition: all .4s;
+}
+
+.navbutton__background {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 2.5rem;
+  right: 2.5rem;
+  background-image: radial-gradient(#243c91, #19213f 20%);
+  z-index: 50;
+  transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+
+  /*transform: scale(50);*/
+}
+
+.navbutton__nav {
+  height: 100vh;
+  width: 0; /*we're setting our apparition animation*/
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left:-100;
+  z-index: 70;
+  transition: 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.navbutton__list {
+  
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.navbutton__item {
+  margin: 1rem;
+}
+
+.navbutton__link:link,
+.navbutton__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 1rem;
+  background-image: linear-gradient(
+    150deg,
+    transparent 0%,
+    transparent 50%,
+    #2e438d 50% /* #24346ec5 50% */
+  );
+  background-size: 300%;
+  transition: all 0.4s;
+  border-radius: 2px;
+}
+
+.navbutton__link:hover,
+.navbutton__link:active {
+  background-position: 100%;
+}
+
+
+
+.navbutton__checkbox:checked ~ .navbutton__background {
+  transform: scale(120);
+}
+
+.navbutton__checkbox:checked ~ .navbutton__nav {
+  opacity: 1;
+  width: 100%;
+  left: 0;
+}
+
+.navbutton__icon {
+  margin-top: 3rem;
+}
+
+/*.navbutton__icon,
+.navbutton__icon:hover,
+.navbutton__icon:after {
+  width: 3rem;
+  height: 2px;
+  background-color: black;
+  display: inline-block;
+}
+
+.navbutton__icon:hover,
+.navbutton__icon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.navbutton__icon:hover {
+  top: -1rem;
+}
+
+.navbutton__icon:after {
+  top: 1rem;
+}
+*/
+
+.icon-close {
+  display: none;
+}
+
+.navbutton__checkbox:checked ~ .navbutton__button > .icon-open {
+  display: none;
+}
+
+
+.navbutton__checkbox:checked ~ .navbutton__button > .icon-close {
+  display: contents;
+}
