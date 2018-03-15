@@ -119,18 +119,19 @@
                 </div>
                 <div class="modal-body">
                     <form id="fReservation">
-                        <ul class="nav nav-tabs nav-justified" id="onglets" role="tablist">
+                        <ul class="nav nav-tabs navbar-white nav-justified" id="onglets" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="combien-tab" data-toggle="tab" href="#combien" role="tab" aria-controls="combien" aria-selected="true">Nombre</a>
+                                <a class="nav-link  bg-white text-dark active" id="combien-tab" data-toggle="tab" href="#combien" role="tab" aria-controls="combien"
+                                    aria-selected="true">Nombre</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="jour-tab" data-toggle="tab" href="#jour" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
+                                <a class="nav-link  bg-white text-dark" id="jour-tab" data-toggle="tab" href="#jour" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="heure-tab" data-toggle="tab" href="#heure" role="tab" aria-controls="quand" aria-selected="false">Heure</a>
+                                <a class="nav-link  bg-white text-dark" id="heure-tab" data-toggle="tab" href="#heure" role="tab" aria-controls="quand" aria-selected="false">Heure</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="nom-tab" data-toggle="tab" href="#nom" role="tab" aria-controls="nom" aria-selected="false">Qui</a>
+                                <a class="nav-link  bg-white text-dark" id="nom-tab" data-toggle="tab" href="#nom" role="tab" aria-controls="nom" aria-selected="false">Qui</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="contenuTab">
@@ -218,18 +219,31 @@
                             <!-- TAB PANE NOM ? -->
                             <div class="form-group tab-pane fade" id="nom" role="tabpanel" aria-labelledby="nom-tab">
 
-                                <h2 class="text-center mt-5">A quel nom ?</h2>
-                                <input type="text" class="form-control-lg" placeholder="Nom">
-                                <input type="text" class="form-control-lg" placeholder="Adresse email">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="checkNewsletter">
-                                    <label class="custom-control-label" for="checkNewsletter">Je m'abonne à la newsletter</label>
+                                <h2 class="text-center mt-5 mb-5">A quel nom ?</h2>
+                                <div class="form-group row">
+                                    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Nom</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Nom et prénom">
+                                    </div>
                                 </div>
-                                <input type="text" class="form-control-lg" placeholder="N° de téléphone">
-                                <button>Précédent</button>
+                                <div class="form-group row">
+                                    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="nom@domaine.com">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Téléphone</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="+33 ...">
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <a class="btn bg-dark text-white" id="resumeR-tab" data-toggle="tab" href="#resumeR" role="button">Terminer</a>
+                                </div>
                             </div>
                             <!-- TAB PANE RESUME ? -->
-                            <div class="tab-pane fade">
+                            <div id="resumeR" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-resume-tab">
                                 <div>Réservation</div>
                                 <div>Juien Foucher. Réservation pour 4 personnes, le vendredi 16 mars à 19h30</div>
                                 <div>A très bientôt</div>
