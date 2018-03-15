@@ -12,7 +12,9 @@
     <!-- custom css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="js/pg-calendar-master/dist/css/pignose.calendar.min.css" />
     <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="navbutton.css">
     <link rel="stylesheet" href="actu.css">
     <link rel="stylesheet" href="style_about-menus.css">
     <link rel="stylesheet" href="styles.css">
@@ -20,8 +22,30 @@
 </head>
 
 <body data-spy="scroll">
+
+    <!-- Navigation Bouton -->
+
+    <div class="navbutton d-xl-none">
+        
+        <input type="checkbox" class="navbutton__checkbox" id="switchToMenu">
+
+        <label for="switchToMenu" class="navbutton__button"><span class="navbutton__icon icon-open"><icon class="ion-navicon-round"></icon></span><span class="navbutton__icon icon-close"><icon class="ion-close-round"></icon></span></label>
+
+        <div class="navbutton__background">&nbsp;</div>
+
+        <nav class="navbutton__nav">
+            <ul class="navbutton__list">
+                <li class="navbutton__item"><a href="#entete" class="navbutton__link">Accueil</a></li>
+                <li class="navbutton__item"><a href="#apropos" class="navbutton__link">A propos</a></li>
+                <li class="navbutton__item"><a href="#menu" class="navbutton__link">Menus</a></li>
+                <li class="navbutton__item"><a href="#blog" class="navbutton__link">Blog</a></li>
+                <li class="navbutton__item"><a href="#infos" class="navbutton__link">Infos</br> Pratiques</a></li>
+            </ul>
+        </nav>
+
+    </div>
     <!-- BOUTON QUI S'AFFICHE SI ON EST SUR MOBILE-->
-    <nav class="navbar navbar-expand-md justify-content-between navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-md justify-content-between navbar-dark fixed-top d-none d-xl-block">
 
         <a class="navbar-brand pt-2" href="#">
             <img class="img-fluid" src="media/logoBugCookersNav.png" />
@@ -35,26 +59,25 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#entete">Accueil</a>
+                    <a class="nav-link js-scrollTo" href="#entete">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#apropos">A propos</a>
+                    <a class="nav-link js-scrollTo" href="#apropos">A propos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#menudsktp">Menus</a>
+                    <a class="nav-link js-scrollTo" href="#menudsktp">Menus</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog</a>
+                    <a class="nav-link js-scrollTo" href="#blog">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#infos">Infos pratiques</a>
+                    <a class="nav-link js-scrollTo" href="#infos">Infos pratiques</a>
                 </li>
             </ul>
         </div>
 
     </nav>
     <header id="entete" class="container-fluid">
-
         <div class="couverture d-flex flex-column justify-content-between align-items-center">
             <div class="mb-auto mt-auto text-center">
                 <div id="grandLogo">
@@ -71,14 +94,14 @@
         <div class="modal-dialog modal-lg" role="document">
             <div id="slidesReservation" class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="reservationModaleLabel">Réservation</h5>
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="fReservation" class="">
-                        <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <form id="fReservation">
+                        <ul class="nav nav-tabs nav-justified" id="onglets" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="combien-tab" data-toggle="tab" href="#combien" role="tab" aria-controls="combien" aria-selected="true">Nombre</a>
                             </li>
@@ -86,7 +109,7 @@
                                 <a class="nav-link" id="jour-tab" data-toggle="tab" href="#jour" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="heure-tab" data-toggle="tab" href="#heure" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
+                                <a class="nav-link" id="heure-tab" data-toggle="tab" href="#heure" role="tab" aria-controls="quand" aria-selected="false">Heure</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="nom-tab" data-toggle="tab" href="#nom" role="tab" aria-controls="nom" aria-selected="false">Qui</a>
@@ -95,63 +118,84 @@
                         <div class="tab-content" id="contenuTab">
                             <!-- TAB PANE COMBIEN ? -->
                             <div class="tab-pane fade show active" id="combien" role="tabpanel" aria-labelledby="combien-tab">
-                                <h2 class="text-center mt-5 mb-3">Pour combien de personnes ?</h2>
-                                <div class="row d-flex justify-content-center">
-
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">1</a>
+                                <h2 class="text-center mt-3 mb-3">Pour combien de personnes ?</h2>
+                                <div class="d-flex justify-content-center">
+                                    <div class="row d-flex carreCombien justify-content-between">
+                                        <div class="col-4 d-flex justify-content-end mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">1</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-center mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">2</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-left mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">3</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">4</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-center mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">5</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-left mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">6</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">7</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-center mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">8</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-left mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">9</button>
+                                        </div>
                                     </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">2</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">3</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">4</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">5</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">6</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">7</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">8</a>
-                                    </div>
-
                                 </div>
                             </div>
                             <!-- TAB PANE QUAND ? -->
                             <div class="tab-pane fade" id="jour" role="tabpanel" aria-labelledby="jour-tab">
-                                <h2 class="text-center mt-5">Pour quel jour ?</h2>
-                                <div>Calendrier</div>
-                                <button>Précédent</button>
+                                <h2 class="text-center mt-3">Pour quel jour ?</h2>
+                                <div class="d-flex justify-content-center no-gutters" id="calendrier">
+                                    <div data-date="12/03/2012" data-date-format="dd/mm/yyyy" class="choisirDate"></div>
+                                </div>
                             </div>
                             <!-- TAB PANE QUELLE HEURE ? -->
                             <div class="tab-pane fade" id="heure" role="tabpanel" aria-labelledby="heure-tab">
-                                <h2 class="text-center mt-5">Pour quelle heure ?</h2>
-                                <div>Midi</div>
-                                <ul>
-                                    <li>11h30</li>
-                                    <li>12h00</li>
-                                    <li>12h30</li>
-                                    <li>13h00</li>
-                                    <li>13h30</li>
-                                    <li>14h00</li>
-                                    <li>14h30</li>
-                                </ul>
-                                <div>Soir</div>
-                                <ul>
-                                    <li>19h30</li>
-                                    <li>20h000</li>
-                                    <li>20h30</li>
-                                    <li>21h00</li>
-                                </ul>
-                                <button>Précédent</button>
+                                <h2 class="text-center mt-3">Pour quelle heure ?</h2>
+                                <h6 class="text-center">Midi</h6>
+                                <div class="d-flex justify-content-center">
+                                    <div class="row d-flex carreCombien justify-content-between">
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">12h00</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">12h30</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">13h00</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">13h30</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h6>Soir</h6>
+                                <div class="d-flex justify-content-between">
+                                    <div class="row d-flex carreCombien justify-content-between">
+                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">19h00</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">19h30</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">20h00</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">20h30</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <!-- TAB PANE NOM ? -->
                             <div class="form-group tab-pane fade" id="nom" role="tabpanel" aria-labelledby="nom-tab">
@@ -175,11 +219,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="row m-4">
-                    <div class="col">
-                        <button type="button" class="btn btn-dark">Continuer</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -298,7 +337,7 @@
 
         <!-- POUR ORDI BUREAU AVEC CSS -->
 
-        <div class="container menu-container d-none d-lg-block">
+        <div id="menudsktp" class="container menu-container d-none d-lg-block">
             <h4 class="menu-h4">NOS MENUS</h4>
             <h2 class="menu-h2">Gastronomie inventive</h2>
             <div class="row justify-content-md-center text-center">
@@ -377,8 +416,6 @@
 
     <section id="blog">
 
-
-
         <div class="container ">
             <h5>ACTUALITÉS</h5>
             <h1>Du bruit dans la cuisine</h1>
@@ -390,11 +427,11 @@
                     <div class="card cardleft" data-toggle="modal" data-target="#exampleModal">
                         <img class="card-img-top " src="media/lao-cafe-56.jpg " alt="Card image cap ">
                         <div class="card-body ">
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                             <h5 class="card-title left">Recette aux insectes</h5>
 
 
-                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text ">On commence par faire cuire les pommes de terre. Vous savez évidemment comment faire (on l’espère
+                                en tout cas, pour votre propre bien) Petit tip’s cependant, car une personne ...</p>
                         </div>
                     </div>
                 </div>
@@ -404,10 +441,10 @@
                     <div class="card cardcenter" data-toggle="modal" data-target="#exampleModal1 ">
                         <img class="card-img-top " src="media/insectes-comestibles.jpg " alt="Card image cap ">
                         <div class="card-body ">
-                            <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
                             <h5 class="card-title left ">Recette aux insectes</h5>
 
-                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text ">On commence par faire cuire les pommes de terre. Vous savez évidemment comment faire (on l’espère
+                                en tout cas, pour votre propre bien) Petit tip’s cependant, car une personne ...</p>
                         </div>
                     </div>
                 </div>
@@ -417,10 +454,10 @@
                     <div class="card cardright" data-toggle="modal" data-target="#exampleModal2">
                         <img class="card-img-top " src="media/cuisinierJulienBoyer.jpg " alt="Card image cap ">
                         <div class="card-body ">
-                            <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
                             <h5 class="card-title">Recette aux insectes</h5>
 
-                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text ">On commence par faire cuire les pommes de terre. Vous savez évidemment comment faire (on l’espère
+                                en tout cas, pour votre propre bien) Petit tip’s cependant, car une personne ...</p>
                         </div>
                     </div>
                 </div>
@@ -682,34 +719,125 @@
     </section>
 
 
-    <section id="infos ">
+    <section id="infos">
 
         <div class="container ">
-            <h5>INFO PRATIQUES</h5>
-            <h1>Le coeur de Lyon Perrache</h1>
-            <div class="margin-up ">
+            <div class="pt-5 pb-5 content">
+                <h5>INFO PRATIQUES</h5>
+                <h1>Le coeur de Lyon Perrache</h1>
+                <div class="row mt-4">
+                    <div class="col-12 col-md-6 mt-3">
 
+                        <iframe src="https://snazzymaps.com/embed/55673" width="100%" height="290px" style="border:none;"></iframe>
+
+                        <div class="mt-3">
+                            <h5>Bug Cookers, 17 rue Delandine, 69002 lyon Tél. 09.08.07.06.05</h5>
+                            <p class="text-center">miam@bugcookers-lyon.com</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-3">
+                        <form>
+                            <div class="form-group ">
+                                <input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" id="exampleInputText" placeholder="Nom">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="exampleTextarea" placeholder="Votre message" rows="7"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" name="contact_submit" class="btn btn-dark">Envoyer &raquo;</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
     </section>
 
-
     <section id="contact ">
+
+
     </section>
 
 
     <footer>
+
+        <footer class="container">
+            <!-- <div class=" container-content "> -->
+            <div class="row justify-content-center ">
+                <div class="col-md-4 align-self-center ">
+                    <ul class="list-unstyled ">
+                        <li>
+                            <a href="#entete">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="#apropos">A propos</a>
+                        </li>
+                        <li>
+                            <a href="#menudsktp">Menu</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 align-self-center ">
+                    <ul class="list-unstyled ">
+                        <li>
+                            <a href="#blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#infos ">Infos pratiques</a>
+                        </li>
+                        <li>
+                            <a href="#">Legal mentions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 align-self-center ">
+                    <ul class="list-unstyled ">
+
+                        <li>
+                            <a href="">
+                                <img src="media/instagram.png " alt="instagram logo">
+                            </a>
+                            <a href="">
+                                <img class="social" src="media/facebook.png " alt="facebook logo">
+                            </a>
+                            <a href="">
+                                <img class="social" src="media/twitter.png " alt="twitter logo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="mt-2 logoFooter" src="media/logoBugCookersNav.png " alt="company logo">
+                            </a>
+                        </li>
+                        <li>
+                            <p>Copyright &copy; BugCookers 2017</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- </div> -->
+        </footer>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
         crossorigin="anonymous "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
         crossorigin="anonymous "></script>
-    <script src="jquery.flip.min.js"></script>
-    <script src="essai.js"></script>
-    <script src="script.js"></script>
+
+    <script src="jquery.flip.min.js "></script>
+    <script src="jquery.paroller.min.js"></script>
+    <script src="essai.js "></script>
+    <script src="script.js "></script>
+    <script src="index.js"></script>
+    <script src="js/pg-calendar-master/dist/js/pignose.calendar.full.js"></script>
+    <script src="js/script.js"></script>
+
+
 </body>
 
 </html>

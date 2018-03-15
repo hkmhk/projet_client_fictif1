@@ -11,7 +11,7 @@
       rgba(0, 0, 0, 0.3) 150px,
       rgba(0, 0, 0, 0.3)
     ),
-    url(media/enteteBugCookers.jpg);
+    url(media/home_bug-compressor.jpeg);
   background-size: cover;
   width: 100%;
   min-height: 100vh;
@@ -49,7 +49,7 @@
   color: #b4bebf;
 }
 #fReservation h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 .pillsReservation {
   background-color: #fff;
@@ -62,4 +62,75 @@
 }
 body {
   position: relative;
+}
+
+.carrecombien {
+  max-width: 400px;
+  min-height: 100%;
+}
+#jour {
+  min-height: 400px;
+}
+.pignose-calendar {
+  width: 400px;
+}
+
+@media all and (max-width: 540px) {
+  #fReservation h2 {
+    font-size: 1.2rem;
+  }
+  #fReservation #onglets .nav-link {
+    font-size: 0.8rem;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  #fReservation #contenuTab #combien .nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  #fReservation #contenuTab #combien .pillsReservation {
+    background-color: #0d1226;
+    border: grey 2px solid;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 50px;
+    height: 100%;
+  }
+  #jour {
+    min-height: 250px;
+  }
+  .picker__footer {
+    font-size: 1rem;
+  }
+  .pignose-calendar {
+    width: 100%;
+  }
+  .pignose-calendar-header {
+    font-size: 0.7rem;
+  }
+  .pignose-calendar-top {
+    padding-bottom: 0.8rem !important;
+  }
+  .pignose-calendar-top-date {
+    line-height: 2rem;
+    padding-top: 0.6rem !important;
+    padding-bottom: 0.3rem !important;
+    margin-bottom: 0 !important;
+  }
+  .pignose-calendar-top-month {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  #fReservation #contenuTab #heure .nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  #fReservation #contenuTab #heure .pillsReservation {
+    background-color: #0d1226;
+    border: grey 2px solid;
+    font-weight: bold;
+    font-size: 1.5rem;
+    min-width: 50px;
+    height: 100%;
+  }
 }

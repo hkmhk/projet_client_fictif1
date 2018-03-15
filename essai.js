@@ -3,4 +3,10 @@ $(document).ready(function(){
         axis: 'y',
         trigger: 'click'
       });
-})
+
+    $('.navbutton__link').click(function(){
+        document.querySelector(".navbutton__checkbox").checked = false;
+    });
+
+      
+});
