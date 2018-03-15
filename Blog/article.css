@@ -1,0 +1,53 @@
+header 
+{
+  height: 22rem;
+  background-image: url(/home/wilder/wcs/Blog/img/bgheader.jpg); 
+  background-size: cover;;  
+}
+
+
+#apropos {
+    padding: 2rem 0 3rem 0;    
+  }
+#square_grey{
+    background-color: rgb(245, 245, 245);
+    height: 250px;
+    width: 50px;
+    margin: 3rem 1.5rem 3rem 3rem;
+    padding-right: 4rem;
+    padding-left: 6rem;
+    padding-top: 1rem;
+}  
+  .apropos-container {
+    width: 70%;
+  }
+  
+  .apropos-h2 {
+    font-size: 50px;
+  }
+  
+  .apropos-h4 {
+    font-size: 35px;
+  }
+  
+  .apropos-h5 {
+    margin: 0;
+    padding: 0.5rem 0;
+    font-size: 15px;
+    
+  }
+  
+  .apropos-p {
+    font-size: 1rem;
+    margin: 3rem 1.5rem 3rem 3rem;
+  }
+  
+  .img_about {
+    border-radius: 2px;
+    box-shadow: 3px 3px rgb(201, 201, 201);
+
+  }
+  #logo_button
+{
+  padding: 2rem;
+}
