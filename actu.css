@@ -74,6 +74,18 @@ ul {
 section#infos p {
   line-height: 0;
 }
+section#infos .form-control {
+  border-color: rgb(14, 16, 39) !important;
+}
+
+section#infos .btn {
+  background-color: rgb(14, 16, 39);
+}
+section#infos {
+  background-color: rgb(245, 245, 245);
+  margin: 0;
+}
+
 /*////////////////////////////////////////
   //                                      //
   //            SECTION footer            //
