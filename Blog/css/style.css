@@ -1,15 +1,11 @@
-
-
 header {
   height: 22rem;
   background-image: url(/home/wilder/wcs/Blog/img/bgheader.jpg); 
   background-size: cover;
   
-} {
-  border-radius: 5px;
-  box-shadow: 4px 4px rgb(197, 197, 197);
-  
-}
+} 
+
+
 
 header h1
 {
@@ -24,4 +20,26 @@ header h1
 #logo_button
 {
   padding: 2rem;
+}
+
+.btn-css {
+  background-color: transparent;
+  color: rgb(51, 48, 48);
+  
+  border: none;
+}
+
+.btn-css:hover 
+{
+  text-decoration:underline;
+  background: none;
+  color: rgb(51, 48, 48);
+}
+
+body{
+  background-color: #dcdde1;
+}
+
+nav.navbar {
+  background-color: #dcdde1 !important;
 }
