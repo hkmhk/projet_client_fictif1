@@ -66,3 +66,45 @@ ul {
     transform: translate(-100px, 20px) rotate(8deg);
   }
 }
+/*////////////////////////////////////////
+  //                                      //
+  //            SECTION infos             //
+  //                                      //
+  ////////////////////////////////////////*/
+section#infos p {
+  line-height: 0;
+}
+section#infos .form-control {
+  border-color: rgb(14, 16, 39) !important;
+}
+
+section#infos .btn {
+  background-color: rgb(14, 16, 39);
+}
+section#infos {
+  background-color: rgb(245, 245, 245);
+  margin: 0;
+}
+
+/*////////////////////////////////////////
+  //                                      //
+  //            SECTION footer            //
+  //                                      //
+  ////////////////////////////////////////*/
+
+footer {
+  background-color: rgb(14, 16, 39);
+  padding-top: 1vh;
+}
+footer a,
+footer p {
+  color: #fff;
+}
+footer .social {
+  padding-left: 1vh;
+}
+footer p {
+  font-size: 12px;
+  font-weight: 100;
+  padding-top: 1vh;
+}
