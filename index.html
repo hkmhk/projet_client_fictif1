@@ -12,6 +12,7 @@
     <!-- custom css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="js/pg-calendar-master/dist/css/pignose.calendar.min.css" />
     <link rel="stylesheet" href="media-queries.css">
     <link rel="stylesheet" href="style_about-menus.css">
     <link rel="stylesheet" href="styles.css">
@@ -34,19 +35,19 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#entete">Accueil</a>
+                    <a class="nav-link js-scrollTo" href="#entete">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#apropos">A propos</a>
+                    <a class="nav-link js-scrollTo" href="#apropos">A propos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#menudsktp">Menus</a>
+                    <a class="nav-link js-scrollTo" href="#menudsktp">Menus</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog</a>
+                    <a class="nav-link js-scrollTo" href="#blog">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#infos">Infos pratiques</a>
+                    <a class="nav-link js-scrollTo" href="#infos">Infos pratiques</a>
                 </li>
             </ul>
         </div>
@@ -70,14 +71,14 @@
         <div class="modal-dialog modal-lg" role="document">
             <div id="slidesReservation" class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="reservationModaleLabel">Réservation</h5>
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="fReservation" class="">
-                        <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <form id="fReservation">
+                        <ul class="nav nav-tabs nav-justified" id="onglets" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="combien-tab" data-toggle="tab" href="#combien" role="tab" aria-controls="combien" aria-selected="true">Nombre</a>
                             </li>
@@ -85,7 +86,7 @@
                                 <a class="nav-link" id="jour-tab" data-toggle="tab" href="#jour" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="heure-tab" data-toggle="tab" href="#heure" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
+                                <a class="nav-link" id="heure-tab" data-toggle="tab" href="#heure" role="tab" aria-controls="quand" aria-selected="false">Heure</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="nom-tab" data-toggle="tab" href="#nom" role="tab" aria-controls="nom" aria-selected="false">Qui</a>
@@ -94,63 +95,84 @@
                         <div class="tab-content" id="contenuTab">
                             <!-- TAB PANE COMBIEN ? -->
                             <div class="tab-pane fade show active" id="combien" role="tabpanel" aria-labelledby="combien-tab">
-                                <h2 class="text-center mt-5 mb-3">Pour combien de personnes ?</h2>
-                                <div class="row d-flex justify-content-center">
-
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">1</a>
+                                <h2 class="text-center mt-3 mb-3">Pour combien de personnes ?</h2>
+                                <div class="d-flex justify-content-center">
+                                    <div class="row d-flex carreCombien justify-content-between">
+                                        <div class="col-4 d-flex justify-content-end mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">1</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-center mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">2</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-left mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">3</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">4</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-center mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">5</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-left mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">6</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">7</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-center mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">8</button>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-left mb-4">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">9</button>
+                                        </div>
                                     </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">2</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">3</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">4</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">5</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">6</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">7</a>
-                                    </div>
-                                    <div class="col-3 text-center mb-4">
-                                        <a class="nav-link bg-dark text-white pt-2 pl-4 pr-4 pillsReservation" href="#">8</a>
-                                    </div>
-
                                 </div>
                             </div>
                             <!-- TAB PANE QUAND ? -->
                             <div class="tab-pane fade" id="jour" role="tabpanel" aria-labelledby="jour-tab">
-                                <h2 class="text-center mt-5">Pour quel jour ?</h2>
-                                <div>Calendrier</div>
-                                <button>Précédent</button>
+                                <h2 class="text-center mt-3">Pour quel jour ?</h2>
+                                <div class="d-flex justify-content-center no-gutters" id="calendrier">
+                                    <div data-date="12/03/2012" data-date-format="dd/mm/yyyy" class="choisirDate"></div>
+                                </div>
                             </div>
                             <!-- TAB PANE QUELLE HEURE ? -->
                             <div class="tab-pane fade" id="heure" role="tabpanel" aria-labelledby="heure-tab">
-                                <h2 class="text-center mt-5">Pour quelle heure ?</h2>
-                                <div>Midi</div>
-                                <ul>
-                                    <li>11h30</li>
-                                    <li>12h00</li>
-                                    <li>12h30</li>
-                                    <li>13h00</li>
-                                    <li>13h30</li>
-                                    <li>14h00</li>
-                                    <li>14h30</li>
-                                </ul>
-                                <div>Soir</div>
-                                <ul>
-                                    <li>19h30</li>
-                                    <li>20h000</li>
-                                    <li>20h30</li>
-                                    <li>21h00</li>
-                                </ul>
-                                <button>Précédent</button>
+                                <h2 class="text-center mt-3">Pour quelle heure ?</h2>
+                                <h6 class="text-center">Midi</h6>
+                                <div class="d-flex justify-content-center">
+                                    <div class="row d-flex carreCombien justify-content-between">
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">12h00</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">12h30</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">13h00</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">13h30</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h6>Soir</h6>
+                                <div class="d-flex justify-content-between">
+                                    <div class="row d-flex carreCombien justify-content-between">
+                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">19h00</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">19h30</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">20h00</button>
+                                        </div>
+                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                            <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">20h30</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <!-- TAB PANE NOM ? -->
                             <div class="form-group tab-pane fade" id="nom" role="tabpanel" aria-labelledby="nom-tab">
@@ -174,11 +196,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="row m-4">
-                    <div class="col">
-                        <button type="button" class="btn btn-dark">Continuer</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -221,6 +238,9 @@
                             <icon class="ion-android-star-outline"></icon>
                         </div>
                         <p class="card-text ">Espuma de coléoptère et brochettes de Gâte-bois</p>
+                        <link rel="stylesheet" href="/pickadate.js/vendor/pickadate/lib/themes/default.css" id="theme_base">
+                        <link rel="stylesheet" href="/pickadate.js/vendor/pickadate/lib/themes/default.date.css" id="theme_date">
+                        <link rel="stylesheet" href="/pickadate.js/vendor/pickadate/lib/themes/default.time.css" id="theme_time">
                         <div class="menu-icon">
                             <icon class="ion-android-star-outline"></icon>
                             <icon class="ion-android-star-outline"></icon>
@@ -513,13 +533,14 @@
     <footer>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
-        crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
         crossorigin="anonymous "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
         crossorigin="anonymous "></script>
-    <script src="script.js"></script>
+    <script src="js/pg-calendar-master/dist/js/pignose.calendar.full.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
