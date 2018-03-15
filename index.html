@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="navbutton.css">
     <link rel="stylesheet" href="actu.css">
     <link rel="stylesheet" href="style_about-menus.css">
     <link rel="stylesheet" href="styles.css">
@@ -20,6 +21,26 @@
 </head>
 
 <body data-spy="scroll">
+
+    <!-- Navigation Bouton -->
+
+    <div class="navbutton">
+        <input type="checkbox" class="navbutton__checkbox" id="switchToMenu">
+
+        <label for="switchToMenu" class="navbutton__button">MENU</label>
+
+        <div class="navbutton__background">&nbsp;</div>
+
+        <nav class="navbutton__nav">
+            <ul class="navbutton__list">
+                <li class="navbutton__item"><a href="#" class="navbutton__link">Home</a></li>
+                <li class="navbutton__item"><a href="#" class="navbutton__link">A propos</a></li>
+                <li class="navbutton__item"><a href="#" class="navbutton__link">Menus</a></li>
+                <li class="navbutton__item"><a href="#" class="navbutton__link">Infos</a></li>
+            </ul>
+        </nav>
+
+    </div>
     <!-- BOUTON QUI S'AFFICHE SI ON EST SUR MOBILE-->
     <nav class="navbar navbar-expand-md justify-content-between navbar-dark fixed-top">
 

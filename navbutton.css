@@ -1,0 +1,43 @@
+.navbutton__checkbox {
+  display: none;
+}
+
+.navbutton__button {
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.navbutton__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(rgb(177, 177, 177), rgb(56, 56, 56));
+  z-index: 50;
+}
+
+.navbutton__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 70;
+}
+
+.navbutton__list {
+}
+
+.navbutton__item {
+}
+
+.navbutton__link {
+}
