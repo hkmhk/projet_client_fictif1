@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -26,20 +27,37 @@
     <!-- Navigation Bouton -->
 
     <div class="navbutton d-xl-none">
-        
+
         <input type="checkbox" class="navbutton__checkbox" id="switchToMenu">
 
-        <label for="switchToMenu" class="navbutton__button"><span class="navbutton__icon icon-open"><icon class="ion-navicon-round"></icon></span><span class="navbutton__icon icon-close"><icon class="ion-close-round"></icon></span></label>
+        <label for="switchToMenu" class="navbutton__button">
+            <span class="navbutton__icon icon-open">
+                <icon class="ion-navicon-round"></icon>
+            </span>
+            <span class="navbutton__icon icon-close">
+                <icon class="ion-close-round"></icon>
+            </span>
+        </label>
 
         <div class="navbutton__background">&nbsp;</div>
 
         <nav class="navbutton__nav">
             <ul class="navbutton__list">
-                <li class="navbutton__item"><a href="#entete" class="navbutton__link">Accueil</a></li>
-                <li class="navbutton__item"><a href="#apropos" class="navbutton__link">A propos</a></li>
-                <li class="navbutton__item"><a href="#menu" class="navbutton__link">Menus</a></li>
-                <li class="navbutton__item"><a href="#blog" class="navbutton__link">Blog</a></li>
-                <li class="navbutton__item"><a href="#infos" class="navbutton__link">Infos</br> Pratiques</a></li>
+                <li class="navbutton__item">
+                    <a href="#entete" class="navbutton__link">Accueil</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#apropos" class="navbutton__link">A propos</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#menu" class="navbutton__link">Menus</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#blog" class="navbutton__link">Blog</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#infos" class="navbutton__link">Infos</br> Pratiques</a>
+                </li>
             </ul>
         </nav>
 
@@ -101,18 +119,19 @@
                 </div>
                 <div class="modal-body">
                     <form id="fReservation">
-                        <ul class="nav nav-tabs nav-justified" id="onglets" role="tablist">
+                        <ul class="nav nav-tabs navbar-white nav-justified" id="onglets" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="combien-tab" data-toggle="tab" href="#combien" role="tab" aria-controls="combien" aria-selected="true">Nombre</a>
+                                <a class="nav-link  bg-white text-dark active" id="combien-tab" data-toggle="tab" href="#combien" role="tab" aria-controls="combien"
+                                    aria-selected="true">Nombre</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="jour-tab" data-toggle="tab" href="#jour" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
+                                <a class="nav-link  bg-white text-dark" id="jour-tab" data-toggle="tab" href="#jour" role="tab" aria-controls="quand" aria-selected="false">Jour</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="heure-tab" data-toggle="tab" href="#heure" role="tab" aria-controls="quand" aria-selected="false">Heure</a>
+                                <a class="nav-link  bg-white text-dark" id="heure-tab" data-toggle="tab" href="#heure" role="tab" aria-controls="quand" aria-selected="false">Heure</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="nom-tab" data-toggle="tab" href="#nom" role="tab" aria-controls="nom" aria-selected="false">Qui</a>
+                                <a class="nav-link  bg-white text-dark" id="nom-tab" data-toggle="tab" href="#nom" role="tab" aria-controls="nom" aria-selected="false">Qui</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="contenuTab">
@@ -160,8 +179,8 @@
                             </div>
                             <!-- TAB PANE QUELLE HEURE ? -->
                             <div class="tab-pane fade" id="heure" role="tabpanel" aria-labelledby="heure-tab">
-                                <h2 class="text-center mt-3">Pour quelle heure ?</h2>
-                                <h6 class="text-center">Midi</h6>
+                                <h2 class="text-center mt-4 mb-4">Pour quelle heure ?</h2>
+                                <h6 class="text-center mb-4">Midi</h6>
                                 <div class="d-flex justify-content-center">
                                     <div class="row d-flex carreCombien justify-content-between">
                                         <div class="col-6 col-sm-3 d-flex mb-3">
@@ -178,19 +197,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h6>Soir</h6>
-                                <div class="d-flex justify-content-between">
+                                <h6 class="text-center mb-4">Soir</h6>
+                                <div class="d-flex justify-content-center">
                                     <div class="row d-flex carreCombien justify-content-between">
-                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
                                             <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">19h00</button>
                                         </div>
-                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
                                             <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">19h30</button>
                                         </div>
-                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
                                             <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">20h00</button>
                                         </div>
-                                        <div class="col-6 col-sm-3 d-flex justify-content-center mb-3">
+                                        <div class="col-6 col-sm-3 d-flex mb-3">
                                             <button class="nav-link bg-dark text-white btn btn-lg pillsReservation" href="#">20h30</button>
                                         </div>
                                     </div>
@@ -200,18 +219,31 @@
                             <!-- TAB PANE NOM ? -->
                             <div class="form-group tab-pane fade" id="nom" role="tabpanel" aria-labelledby="nom-tab">
 
-                                <h2 class="text-center mt-5">A quel nom ?</h2>
-                                <input type="text" class="form-control-lg" placeholder="Nom">
-                                <input type="text" class="form-control-lg" placeholder="Adresse email">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="checkNewsletter">
-                                    <label class="custom-control-label" for="checkNewsletter">Je m'abonne à la newsletter</label>
+                                <h2 class="text-center mt-5 mb-5">A quel nom ?</h2>
+                                <div class="form-group row">
+                                    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Nom</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Nom et prénom">
+                                    </div>
                                 </div>
-                                <input type="text" class="form-control-lg" placeholder="N° de téléphone">
-                                <button>Précédent</button>
+                                <div class="form-group row">
+                                    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="nom@domaine.com">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Téléphone</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-lg" id="colFormLabelLg" placeholder="+33 ...">
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <a class="btn bg-dark text-white" id="resumeR-tab" data-toggle="tab" href="#resumeR" role="button">Terminer</a>
+                                </div>
                             </div>
                             <!-- TAB PANE RESUME ? -->
-                            <div class="tab-pane fade">
+                            <div id="resumeR" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-resume-tab">
                                 <div>Réservation</div>
                                 <div>Juien Foucher. Réservation pour 4 personnes, le vendredi 16 mars à 19h30</div>
                                 <div>A très bientôt</div>
@@ -425,13 +457,13 @@
                     <!-- == Cards == -->
                     <!-- card left -->
                     <div class="card cardleft" data-toggle="modal" data-target="#exampleModal">
-                        <img class="card-img-top " src="media/lao-cafe-56.jpg " alt="Card image cap ">
+                        <img class="card-img-top " src="media/lao-cafe-56.jpg " alt="Card image cap">
                         <div class="card-body ">
-                            <h5 class="card-title left">Recette aux insectes</h5>
+                            <h5 class="card-title left">L’incontournable soupe d'hiver !</h5>
 
 
-                            <p class="card-text ">On commence par faire cuire les pommes de terre. Vous savez évidemment comment faire (on l’espère
-                                en tout cas, pour votre propre bien) Petit tip’s cependant, car une personne ...</p>
+                            <p class="card-text ">Quel est LE plat qu’on a en tête dès qu’on évoque le mot « plat hivernal ». LE plat le plus convivial
+                                du monde [...]</p>
                         </div>
                     </div>
                 </div>
@@ -441,10 +473,10 @@
                     <div class="card cardcenter" data-toggle="modal" data-target="#exampleModal1 ">
                         <img class="card-img-top " src="media/insectes-comestibles.jpg " alt="Card image cap ">
                         <div class="card-body ">
-                            <h5 class="card-title left ">Recette aux insectes</h5>
+                            <h5 class="card-title left ">Écrasé de pomme de terre aux molitors</h5>
 
                             <p class="card-text ">On commence par faire cuire les pommes de terre. Vous savez évidemment comment faire (on l’espère
-                                en tout cas, pour votre propre bien) Petit tip’s cependant, car une personne ...</p>
+                                en tout cas, pour votre propre bien) Petit tip’s cependant [...]</p>
                         </div>
                     </div>
                 </div>
@@ -454,10 +486,10 @@
                     <div class="card cardright" data-toggle="modal" data-target="#exampleModal2">
                         <img class="card-img-top " src="media/cuisinierJulienBoyer.jpg " alt="Card image cap ">
                         <div class="card-body ">
-                            <h5 class="card-title">Recette aux insectes</h5>
+                            <h5 class="card-title"> Interview de notre chef Julien Boyer dans le Gault Millau</h5>
 
-                            <p class="card-text ">On commence par faire cuire les pommes de terre. Vous savez évidemment comment faire (on l’espère
-                                en tout cas, pour votre propre bien) Petit tip’s cependant, car une personne ...</p>
+                            <p class="card-text ">Nous avons décidé de sortir un peu de la fourmilière et d’aller à la rencontre de personnalités
+                                inspirantes pour leur demander [...]</p>
                         </div>
                     </div>
                 </div>
@@ -712,7 +744,7 @@
                 </div>
             </div>
             <div class="mt-5 text-center">
-                <button type="button " class="btn btn-outline-secondary ">TOUTES LES ACTUALITÉS</button>
+                <a href="Blog/index.html" class="btn btn-outline-secondary">TOUTES LES ACTUALITÉS</a>
             </div>
         </div>
 
@@ -771,23 +803,23 @@
                 <div class="col-md-4 align-self-center ">
                     <ul class="list-unstyled ">
                         <li>
-                            <a href="#entete">Accueil</a>
+                            <a class="js-scrollTo" href="#entete">Accueil</a>
                         </li>
                         <li>
-                            <a href="#apropos">A propos</a>
+                            <a class="js-scrollTo" href="#apropos">A propos</a>
                         </li>
                         <li>
-                            <a href="#menudsktp">Menu</a>
+                            <a class="js-scrollTo" href="#menudsktp">Menu</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-4 align-self-center ">
                     <ul class="list-unstyled ">
                         <li>
-                            <a href="#blog">Blog</a>
+                            <a class="js-scrollTo" href="#blog">Blog</a>
                         </li>
                         <li>
-                            <a href="#infos ">Infos pratiques</a>
+                            <a class="js-scrollTo" href="#infos ">Infos pratiques</a>
                         </li>
                         <li>
                             <a href="#">Legal mentions</a>
@@ -828,7 +860,6 @@
         crossorigin="anonymous "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
         crossorigin="anonymous "></script>
-
     <script src="jquery.flip.min.js "></script>
     <script src="jquery.paroller.min.js"></script>
     <script src="essai.js "></script>
@@ -836,8 +867,6 @@
     <script src="index.js"></script>
     <script src="js/pg-calendar-master/dist/js/pignose.calendar.full.js"></script>
     <script src="js/script.js"></script>
-
-
 </body>
 
 </html>
