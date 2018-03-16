@@ -1,9 +1,10 @@
-header 
-{
-  height: 22rem;
+header {
+  
   background-image: url(/home/wilder/wcs/Blog/img/bgheader.jpg); 
-  background-size: cover;;  
-}
+  background-size: cover;
+  position: relative;
+  padding: 2rem;
+} 
 
 
 #apropos {
@@ -48,6 +49,25 @@ header
 
   }
   #logo_button
+  {
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+h2, h4, h5
 {
-  padding: 2rem;
+  font-family: 'Merriweather';
+}
+
+p
+{
+  font-family: 'Montserrat';
+}
+.recipies {
+  background-color: rgba(0, 0, 0, 0.15);
+  
+  padding: 1rem;
+  margin-right: 1rem;
 }
