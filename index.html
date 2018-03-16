@@ -26,37 +26,49 @@
     <!-- Navigation Bouton -->
 
     <div class="navbutton d-xl-none">
-        
+
         <input type="checkbox" class="navbutton__checkbox" id="switchToMenu">
 
-        <label for="switchToMenu" class="navbutton__button"><span class="navbutton__icon icon-open"><icon class="ion-navicon-round"></icon></span><span class="navbutton__icon icon-close"><icon class="ion-close-round"></icon></span></label>
+        <label for="switchToMenu" class="navbutton__button">
+            <span class="navbutton__icon icon-open">
+                <icon class="ion-navicon-round"></icon>
+            </span>
+            <span class="navbutton__icon icon-close">
+                <icon class="ion-close-round"></icon>
+            </span>
+        </label>
 
         <div class="navbutton__background">&nbsp;</div>
 
         <nav class="navbutton__nav">
             <ul class="navbutton__list">
-                <li class="navbutton__item"><a href="#entete" class="navbutton__link">Accueil</a></li>
-                <li class="navbutton__item"><a href="#apropos" class="navbutton__link">A propos</a></li>
-                <li class="navbutton__item"><a href="#menu" class="navbutton__link">Menus</a></li>
-                <li class="navbutton__item"><a href="#blog" class="navbutton__link">Blog</a></li>
-                <li class="navbutton__item"><a href="#infos" class="navbutton__link">Infos</br> Pratiques</a></li>
+                <li class="navbutton__item">
+                    <a href="#entete" class="navbutton__link">Accueil</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#apropos" class="navbutton__link">A propos</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#menu" class="navbutton__link">Menus</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#blog" class="navbutton__link">Blog</a>
+                </li>
+                <li class="navbutton__item">
+                    <a href="#infos" class="navbutton__link">Infos</br> Pratiques</a>
+                </li>
             </ul>
         </nav>
 
     </div>
     <!-- BOUTON QUI S'AFFICHE SI ON EST SUR MOBILE-->
-    <nav class="navbar navbar-expand-md justify-content-between navbar-dark fixed-top d-none d-xl-block">
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top">
 
-        <a class="navbar-brand pt-2" href="#">
-            <img class="img-fluid" src="media/logoBugCookersNav.png" />
+        <a class="navbar-brand" href="#">
+            <img src="media/logoBugCookersNav.png" />
         </a>
-
-        <button class="btn navbar-toggle navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <!--NAV QUI S'AFFICHE SI ON EST SUR DESKTOP-->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end d-none d-xl-block" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link js-scrollTo" href="#entete">Accueil</a>
