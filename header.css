@@ -19,6 +19,7 @@
 }
 #entete .couverture {
   min-height: 100vh;
+  animation-duration: 2s;
 }
 .db {
   background-color: aqua;
@@ -27,6 +28,7 @@
 
 #grandLogo {
   margin-bottom: 30px;
+  animation-duration: 4s;
 }
 #reserverBtn {
   background-color: #0d1226;
@@ -35,6 +37,7 @@
   padding: 10px 40px 10px 40px;
   text-transform: uppercase;
   font-weight: bold;
+  animation-duration: 4s;
 }
 #reserverBtn:hover {
   background-color: #19213f;

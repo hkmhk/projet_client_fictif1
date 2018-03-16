@@ -8,4 +8,5 @@ $(document).ready(function(){
         document.querySelector(".navbutton__checkbox").checked = false;
     });
       
+    $('#grandLogo, #reserverBtn, #entete').addClass('animated fadeIn');
 });
