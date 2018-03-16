@@ -40,6 +40,13 @@
   border-radius: 2px;
   box-shadow: 3px 3px rgb(201, 201, 201);
 }
+#animRight {
+  animation-delay: 1s ;
+}
+#animLeft {
+  animation-delay: 1s ;
+}
+}
 
 
 /*////////////////////////////////////////
